@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obraz27 — Panorama Viewer</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAGiklEQVR4nO1XXWwU1xX+zr13Zme9u95d/0BsE0wMihMgJg0liSXIYmh4iEoVNXWkSKRqWsU8JTy0aqWUiEVNFVXqS9Q+tE6bl8ALPNKnuoTQqg+BWiSF4LgBagOhgL3r3fX+ztx7Tx9mHQwB1FBZ7UOONKPRzD33fPec79z7DfBljCEBoH+ifyhS8RgFaMxBe2WP+yf6hxaP+U9NfCkAS2BfAVA8PHxTzbKH1/J+7LdLEWzfvn3i7Nks3fsMS0BCdem7r4SOJLgj4tK0tVP9b/9yCtksIZtlACAivie8zAQA2SwomwW/sndyFbUuX+WXCiwECACIU+s5BM4g4eCy1D+/f+bM3jtmgGD6J/qHplZOv9cI6gYMeI4ney/1bpt8ePLYwpjbua95+sIbouWBn+pGFSAVZgCFvAUAAmtAqFg6JQuFQlqcOidt3xpjtbVtq9uKN0+lQbwoKXeoaj6fTwohxKmrSfm1/qJ5bEdV5nKwVltN8FUIgESTcERga6PGvhp8/ZndsAzBYCcesxd27fnmAwc+HB/dXXZHEPcH5q9IgIAFDAzYwJXIsNqYHXXHMyP+yFP/2PitPfSHckULolmSgmDhRdhUrJQgMNsQgHLVYtReaV55pXxL2KEaaO2E2vkNJryl8Q70bgDY9GjRqy5yIkLsodNFHCc9fhwa2I2Vz03y2MlUx/VcFY4UsMxwXA/RlkXAAVBx3fbswrNVgp1iaUv08r+eEhYWsGQjESomEgfMfHFau1J6ZTbv/JA27H390s5a0LAAEHE9sex32SP64MsfiURZ2kCYRCzSW/bju+oNzURgIRzR3db4czzW+AuMIEuWAUAlPz6aXbQW5NcPvR4jZxusD4AganWka43vgRQQBIAhrD1Xhh/XgIEEA0YFKFx7+FmP2p4F2gAJzJbDhUoJWGvheALxWOX9vx5c/rPF8RRnMmEJPotK9NTMlElcFj0dx6pBYMAshVIqmZ/f5JbLykKwgCW3mCisnuk4bQMNC8BVCvOFyCN166fIr7E1guKxQKe8ysnABJpZGTcSla1u7nImwyoahazVbt8poQkAkgABHGJ2a32DOUY7M7oCRhfnOwfGBAQc3Lg/uOPiWHIrc3JzNWgZ1Lzh+bkc8xmXcPf9/gvfGCC2kPzt70i2kMN/OpGYcdtp1r0fV6PdmIuswJV4h7Js5Uu/tY4decmxh6xs5xm1opFHdzCDFcE1dPo5OjGxLsFg+dwwS4AlwF9oWHXrC2pSdBjAYQAf9ACvPfQWLiYikNJAijhaY9PA4ccwOj6CEYxidBh4+8c/QdfVIgKykMaiWl6BlfO/AGPtotnuuGXcPjUEgPmMu+H5fK5l0HBycyVo3cq8ZselMdFMf1gAgdzygTFGV7NM7VzteyJ3iNn9vJx3iEyZDCsA+CwK2VODcfo+ffFqPvWiX6sYCCuVctR8Lb6pWnEUKcuoRymy6WihZd+e04EOQACko/CbF/QjQ+/plJWCyRjSsZguphMnWRvNgIm6Ss6t7Hp3lSy+u0B4AFDHj5NugtHnAAx2X1+Rq3UONWptECRhbAhees20+EAp1ei4tvz8kNYhkYUS8FNtEIhBEAChICsVtaxS2RI6WcDxYFOtx+jvxzUAjXNNDgy+cC0bsk+QkpZLFbXF1Bpa2MBaMLVEFMXcuQPFip4WQkvNrSbVObHBrzg7tW8sCIgoR0z0tR4ZlPxRPSql0sY4sY7eRKW8SzTqDAi2HIhIqbx1bsN2KTTIItyIqGv7jVOFADR8RuDXQUTQhrGsPYofPHPhib2vrj6xMO7RCjZ9Au9EvXkaRt2oDFr6H9f04UkoABo4/9obj/f9+uAHKM0i5DoDcADXBZjDaASoRnVeg8Iz3xpQKhH47feZhmGALXEsVrcXZzQhw2rj1lF3/P0RvzI5kMSDn35OJGZg/alK8hQy6sj3y+7O0bj/z4tXqNrbM2vLKQECsZRwruciXrHkItQXYcMln5w3zauR2sym7+mrbxa4kD72CXcUCoV0Pp9P3oh0QxF5ZY8xd3dFlD+fTxamC+nSsb+Fc6XXvcnoMYyuBqPbMLqN6ki7IlyFdlUE0NWqSdF9c3dv0uaWQrjpZLvVbtURl5YPmHR7p2AbuNTsS7XjyevbAEBYsNtiKSj5U7/6I9OCjAL+e0m2IO8mX/7R7+uOe3S2WmVIcQ/idClE6fAw33AYBtZ+nOX9+5dOlmfPnv3/kuX/8z+jrwD8G39uRbLwyH8mAAAAAElFTkSuQmCC">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 0 40px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+        }
+
+        /* Main Container */
+        #viewer-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        #canvas-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Upload Overlay */
+        #upload-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: opacity 0.5s ease;
+        }
+
+        #upload-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .upload-area {
+            text-align: center;
+            padding: 60px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            max-width: 500px;
+        }
+
+        .upload-area:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .upload-area.dragging {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .upload-text {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .upload-subtext {
+            font-size: 12px;
+            opacity: 0.5;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        /* Controls Panel */
+        #controls-panel {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            padding:  12px 30px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: none;
+            align-items: center;
+            gap:  15px;
+            z-index: 100;
+        }
+
+        #controls-panel.visible {
+            display: flex;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size:  18px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            padding:  6px 10px;
+        }
+
+        .control-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .control-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        #btn-share {
+            display: block;
+        }
+
+        #btn-share.visible {
+            display: block;
+        }
+
+        /* Info Panel */
+        #info-panel {
+            position: fixed;
+            top: 80px;
+            right: 40px;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            font-weight: 300;
+            opacity: 0.7;
+            z-index: 100;
+            display: none;
+        }
+
+        #info-panel.visible {
+            display: block;
+        }
+
+        .info-item {
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Loading */
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            z-index: 101;
+            display: none;
+            text-align: center;
+        }
+
+        #loading.visible {
+            display: block;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #loading-progress {
+            margin-top: 10px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        /* Thumbnails */
+        #thumbnails {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+            max-width: calc(100% - 80px);
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        #thumbnails::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        #thumbnails::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        #thumbnails::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .thumbnail.active {
+            border-color: #ffffff;
+            opacity: 1;
+        }
+
+        /* Instructions */
+        #instructions {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            opacity: 0.5;
+            letter-spacing: 1px;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        /* Share Modal */
+        #share-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        #share-modal.visible {
+            display: flex;
+        }
+
+        .modal-content {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .share-link-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .share-link {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: monospace;
+            outline: none;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .close-modal {
+            margin-top: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .modal-note {
+            font-size: 11px;
+            opacity: 0.5;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .upload-area {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+
+            #controls-panel {
+                bottom: 20px;
+                padding: 15px 20px;
+                gap: 15px;
+            }
+
+            #info-panel {
+                top: 60px;
+                right: 20px;
+                font-size: 11px;
+            }
+
+            #thumbnails {
+                bottom: 100px;
+                left: 20px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+
+            .share-link-container {
+                flex-direction: column;
+            }
+
+            .share-link {
+                font-size: 11px;
+            }
+        }
+    
+    /* Minimalist Loading Spinner */
+    .loading-spinner-upload {
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgba(102, 126, 234, 0.2);
+        border-top: 2px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 15px auto 0;
+        display: none;
+    }
+
+    .loading-spinner-upload.active {
+        display: block;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* ===== TOUR MODE ===== */
+    #btn-create-tour {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        z-index: 1100;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.25);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        padding: 9px 18px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+    #btn-create-tour:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.55); }
+    #btn-create-tour.tour-active { background: rgba(255,80,80,0.15); border-color: rgba(255,100,100,0.6); color: #ff9a9a; }
+
+    #tour-panel {
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        width: 290px;
+        background: rgba(10,10,10,0.96);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(16px);
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-select: none;
+        opacity: 0;
+        transform: translateX(20px) scale(0.97);
+        transform-origin: top right;
+        transition: opacity 0.32s cubic-bezier(0.4,0,0.2,1),
+                    transform 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+    #tour-panel.visible {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0) scale(1);
+    }
+    .tp-head, .tp-section {
+        transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+    #tour-panel:not(.visible) .tp-head,
+    #tour-panel:not(.visible) .tp-section { opacity: 0; transform: translateY(6px); }
+    #tour-panel.visible .tp-head         { transition-delay: 0.06s; }
+    #tour-panel.visible .tp-section:nth-child(2) { transition-delay: 0.10s; }
+    #tour-panel.visible .tp-section:nth-child(3) { transition-delay: 0.15s; }
+    #tour-panel.visible .tp-section:nth-child(4) { transition-delay: 0.20s; }
+    #tour-panel.visible .tp-section:nth-child(5) { transition-delay: 0.25s; }
+    .tp-head { padding: 14px 18px 10px; font-size: 12px; font-weight: 400; letter-spacing: 1.2px; border-bottom: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.85); }
+    .tp-section { padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .tp-section:last-child { border-bottom: none; }
+    .tp-lbl { font-size: 10px; letter-spacing: 0.8px; opacity: 0.45; margin-bottom: 7px; text-transform: uppercase; }
+    #tour-pano-list { display: flex; flex-direction: column; gap: 5px; max-height: 175px; overflow-y: auto; margin-bottom: 8px; }
+    #tour-pano-list::-webkit-scrollbar { width: 3px; }
+    #tour-pano-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); }
+    .tp-pano-item { display: flex; align-items: center; gap: 9px; padding: 7px 9px; border-radius: 5px; background: rgba(255,255,255,0.03); border: 1px solid transparent; cursor: pointer; transition: all 0.2s; font-size: 11px; }
+    .tp-pano-item:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+    .tp-pano-item.tp-current { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.06); }
+    .tp-pano-item img { width: 40px; height: 26px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+    .tp-pano-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: 0.8; }
+    .tp-pano-idx { font-size: 10px; opacity: 0.35; flex-shrink: 0; background: rgba(255,255,255,0.05); padding: 2px 5px; border-radius: 3px; }
+    #btn-tour-add-pano { width: 100%; padding: 8px; background: none; border: 1px dashed rgba(255,255,255,0.18); border-radius: 5px; color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s; }
+    #btn-tour-add-pano:hover { background: rgba(255,255,255,0.05); color: #fff; border-color: rgba(255,255,255,0.35); }
+    #hotspot-target-select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 7px 9px; border-radius: 5px; font-size: 11px; outline: none; cursor: pointer; margin-bottom: 7px; }
+    #hotspot-target-select option { background: #111; }
+    #flare-type-select { appearance: auto; }
+    #flare-type-select option { background: #1a1a1a; color: #fff; }
+    #flare-type-select {
+        width: 100%; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.18);
+        color: #fff; padding: 7px 9px; border-radius: 5px; font-size: 11px;
+        outline: none; cursor: pointer; margin-bottom: 7px;
+    }
+    #btn-add-hotspot { width: 100%; padding: 8px; background: rgba(70,160,255,0.07); border: 1px solid rgba(70,160,255,0.25); border-radius: 5px; color: rgba(130,200,255,0.9); font-size: 11px; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s; }
+    #btn-add-hotspot:hover { background: rgba(70,160,255,0.15); border-color: rgba(70,160,255,0.5); }
+    #btn-add-hotspot.placing { background: rgba(255,170,40,0.1); border-color: rgba(255,170,40,0.45); color: rgba(255,205,110,0.95); }
+    #btn-save-tour { width: 100%; padding: 9px; background: rgba(255,255,255,0.88); border: none; border-radius: 5px; color: #000; font-size: 11px; font-weight: 500; letter-spacing: 0.8px; cursor: pointer; transition: all 0.2s; }
+    #btn-save-tour:hover { background: #fff; }
+    #btn-save-tour:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: all; }
+    #btn-save-tour:disabled:hover { background: rgba(255,255,255,0.88); }
+    #tour-save-status { font-size: 10px; text-align: center; margin-top: 6px; opacity: 0.5; min-height: 14px; letter-spacing: 0.5px; }
+
+    /* Hotspot dots */
+    .hotspot-dot { position: absolute; width: 46px; height: 46px; transform: translate(-50%,-50%); cursor: pointer; z-index: 200; pointer-events: all; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
+    .hotspot-dot .dot-delete-btn { display: none; position: absolute; top: -10px; right: -10px; width: 16px; height: 16px; cursor: pointer; z-index: 400; user-select: none; color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 400; line-height: 16px; text-align: center; transition: color 0.2s; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.7)); }
+    .hotspot-dot.edit-mode .dot-delete-btn { display: block; }
+    .hotspot-dot.edit-mode .dot-delete-btn:hover { color: rgba(255,255,255,0.95); }
+    .hotspot-dot-inner { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.9); box-shadow: 0 0 0 3px rgba(255,255,255,0.28), 0 0 18px rgba(255,255,255,0.35); transition: all 0.2s; display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1; letter-spacing: 0; user-select: none; -webkit-user-select: none; }
+    .hotspot-dot:hover .hotspot-dot-inner { transform: translate(-50%,-50%) scale(1.25); box-shadow: 0 0 0 4px rgba(255,255,255,0.45), 0 0 28px rgba(255,255,255,0.55); }
+    .hotspot-dot-label { display: none; }
+
+    #placing-hint { position: fixed; bottom: 105px; left: 50%; transform: translateX(-50%); background: rgba(255,165,40,0.12); border: 1px solid rgba(255,165,40,0.4); color: rgba(255,205,100,0.95); font-size: 12px; letter-spacing: 0.5px; padding: 9px 22px; border-radius: 50px; z-index: 600; display: none; pointer-events: none; }
+    #placing-hint.visible { display: block; }
+    #tour-file-input { display: none; }
+
+    /* Custom notification toast */
+    #hs-toast {
+        position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -50%) scale(0.92);
+        background: rgba(18,18,18,0.97);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 14px;
+        padding: 28px 36px;
+        z-index: 9999;
+        min-width: 280px; max-width: 380px;
+        text-align: center;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    #hs-toast.show {
+        opacity: 1; pointer-events: all;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    #hs-toast-icon { font-size: 28px; margin-bottom: 12px; }
+    #hs-toast-msg {
+        font-size: 13px; font-weight: 300;
+        letter-spacing: 0.5px; color: rgba(255,255,255,0.85);
+        line-height: 1.6;
+    }
+    #hs-toast-btn {
+        margin-top: 20px;
+        padding: 8px 28px;
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 50px;
+        background: transparent;
+        color: #fff;
+        font-size: 12px; letter-spacing: 1px;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+    }
+    #hs-toast-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+    #hs-toast-overlay {
+        position: fixed; inset: 0;
+        background: rgba(0,0,0,0.35);
+        z-index: 9998;
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.25s ease;
+        backdrop-filter: blur(2px);
+    }
+    #hs-toast-overlay.show { opacity: 1; pointer-events: all; }
+
+    /* Запрет выделения при перетаскивании точек */
+    .hotspot-dot, .hotspot-dot * {
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-select: none;
+    }
+    .hotspot-dot.edit-mode:active,
+    .hotspot-dot.edit-mode:focus {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* Hotspot edit mode */
+    .hotspot-dot.edit-mode { cursor: grab; }
+    .hotspot-dot.edit-mode:active { cursor: grabbing; }
+    .hotspot-dot.edit-mode .hotspot-dot-inner {
+        background: rgba(255,210,60,0.92);
+        box-shadow: 0 0 0 3px rgba(255,210,60,0.3), 0 0 16px rgba(255,210,60,0.45);
+    }
+    #hs-ctx-menu {
+        position: fixed;
+        background: rgba(15,15,15,0.97);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 7px;
+        backdrop-filter: blur(12px);
+        z-index: 3000;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        min-width: 160px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    #hs-ctx-menu.visible { display: flex; }
+    .ctx-item {
+        padding: 10px 16px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        color: rgba(255,255,255,0.8);
+        transition: background 0.15s;
+    }
+    .ctx-item:hover { background: rgba(255,60,60,0.15); color: #ff7070; }
+
+
+    @keyframes flarePulse {
+        0%,100% { opacity:0.8; transform:scale(1); }
+        50%      { opacity:1;   transform:scale(1.15); }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="display: flex; align-items: center;">
+                <a href="https://obraz27.com/" target="_blank" style="display: block; line-height: 0; transition: all 0.3s ease;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAYkUlEQVR4nO2dXaxk2XXXf2vtXXXv7dsfnpkeezzxjD+ETQyeEEBKHmJFzkOE4IUkTyGJH5ACQop4ioxBUbBEoggl8QPmiQeecAzkhRiIsHgItiISIYNIJl8EkDIeT8/3TLe7+/a9VXX2Wjzsvc9H1b0z0/ecwSVX/aXq01X3nFP77L322mv991qrxN35TsUn/uAZ/+Zjz3P3yt23PVdKN7h072+c3uCpN57m2WeelXexmd9W6Le7AXt8e7EXgB3HXgB2HHsB2HHsBWDHsReAHcdeAHYcewHYcewFYMexF4Adx14Adhx7Adhx7AVgx7EXgB3HXgB2HHsB2HHsBWDHsReAHcdeAHYcewHYcewFYMexF4Adx14Adhx7Adhx7AVgx7EXgB1HfP0f/OKo3DBV5ZateOaXP/cdmz61jfjHn/8914MnSSkBeSbbJY7x5F98cVRDROfcuXEAv/y5UffZ4+Hw6195g4VfpeZ2iue8xoc9xg/eX4xriTackiZ4pD0eBg+a97LwpzGzUfeJbs2oG4iC67h77PHwEHNUBfNxky+KXH7pdsBtherhqEbs8fAIoqSUGJveP8oLcHdE4mg19O4it01cy6t8LOVV4Ch+bndsq21rucU6zpEbdXXtmrGNePewzYI5Du7eFrMYgzj6DgbYds6Sfqtc1oRhXXOu/d2FCzTClkADmOI+zv4a/4SuHK1G3+XdxXny6Zpfb3nd9mqQlc02ZPgyGK8BRLh6toRP/6zziY9DagAHlXz0fA6uZd0tVuuG/go0koif/XvTqRNXQAezva0FNDink5GhpjA2VcU4/LMvnXqYH5Ga3C2D5vbqE7WfOajmlqwSHB7AH/4vML2O23gjcJQAiAj4imtyyIv/7t+z/I9foXED9WwgqneDgObuFAMxxBX13n2Al44PeN/Jt/yj/+SzEwlB38rLA+1iuYP7A121wXkzfkIt8Atf+CP/17/5KqfpfUSGxrNJ1Ua5f9RqvxmuQkpOCAGAZRNZpWu4j2/beA2gQrM84VGZk5qEiODurVmgrYBq+cza9+ogkoUlhMBCnetpuhmnztDqL9hQPmJlnhdtUYRE/CLP4JKQq5wulizDk5yuVihC7Q8vApDba4M2euNEnbE4axARRCNCAMkaYgxGC4CZcRjnpMWCuQjugiCtILSqdePK+hfLq0VQrsyEWZp23d0Y7ItmemlLe07rPk7XlqaZgV5l1RzhfkDCkNIzXhralavrvlhEaFYAB5iCJQOX7fACVBxvligBQco6XwZfBCnE86Ctg5YHzBNKGL2eraNxGzqCdcnxXhOKqYJYZxSKlXMNn5Dmtnaw+8fy//ZYGtbrC3dH0axZzfM5opNYJxN4ASB1/SpruZtdMMvO+8xRArijGhEJo5tUobHM9t7Sk1vYe+x+L/ba3BpkI5jSdQhDg7N+fW+uD85u/yeShVnK+f1JBgh26WO0EbOu3gQPvYFzRIFqoMg5MtbXqyK4GVKMIrHptIB4sUFaO8DwOsv7s713vg+EYGIbANDKRrq1s758+0Az5S7Kat6d7PeL575SwaxhNp/hq1S0mF/qGJtZuNQ2Yh3DUFYRbxJqoKL54dwRqTvPbwF3DCOQ+W1fLSfpaOiMwKHK76n6Hs5b6w3F0nQaIK0REtVO6nGq9I1ksN45VlzCrC3nM2iaU2ZVjinj8pDHeC/OMMmd9bDH9kEscaTKXMCbol4uUuXef0BAHXUFBLXE0Xka45LQxgkMBbw0eLNZ5/jg6oAeTNYeiUe4ngFkY84M7U2QTQ6inKM9de+CaELTgqOZYUVjXmb8TCAe/fUfGvVQZsZVd06+/nssX32NuQoBspGSUjYMofTs5uCalXM8MW+U9H//bFR7Kn7t//ycv6dxbo1yKiLJrvOZF7/kv/LkT4xWBd94IbFYKRIUT02ezS2NvklFAwhFA3gixIh7w2M34Hs/fpMguQj2ZSewCchUlrf/jU/77f/y21wzQZZLomQL4Vy6tZ1mZYlQSKmhmc+5G+echEAKgaQGVK67LDUUhend3EnuaIBkhsbAHz9+h6/9wLd48289yVc/9BLPP3KP4cVdM9Zdqb4GOH7wFI+9/Ele/vJNjv/HJ3nswSdYimDeoJ6XLKvu28YAlmczwU3wcEDyQ1Z+lVWKBK1eQEcAuXjv+4fLggogS2bB+IG/coNf//xskrVpPBFUcDcqFiJmDQcas7FyjgXdSXYHs4SqEhvj5mrF4xjIgsyKVepYh1dtbObU04TF4YL/fZpYLFfEtwiYOM+PHi4FEeM6i+YxJH2YWfooCcfECOu2xcZ9skCoKSIBT465YyQ0OJaG/eMDI0TatuSPFanC4Stm8RSYXfhcD4PJBACV4jM7K0tECX3CPSuD3umVeXPy4Lt7YQYNswY8QHFXMqx3XfVAsm+tooVWlczeJWspaXXrZv55g3UBMeSS/xZwcKfByfxLAk8gMW/JlrZ1wqCtRw9efPcG1Xnun/Jd7pbtJNfe2m9AZzuJg5EIojkCqLKsE8ZfTCcA5i3BMQuSmSq3zT6vXDwdd+CeFyRRwa1BK5/QWRAdibPmRKsqZqtiHQupeCDZai5kFHTu3/pgX8QKVkau3Asku6nRUBGa1ZKoPfLKKUEl3ruBY+UpUlrlSeK5n2KMrQE3aE7pmyoUIpLtJFXEnRimmfkVk5ncwZUZEXFoUlOWgM5HqQyXVL+8vMTzOilFRYgoSIl1cy/n9Tduel8qgBmqs3bwgwRCL0DFXVrXt71szQ6or/NQBzi6EDWAOSklQgikXrv8XO8lqx0XzYIogkpERGnqLBYr9oPQtwdaStgtG42Ah0hqzjemL4vpNADZI8juiuQdYM9cdx3HDCkPXBTlYF3IS0ie2THrVF/jEjZVSrmPFw4ir7V19ptYubxognZ3WOrw5OulPSO/B1Ap0U6ZrsYaNGqrguvStd4aZ53ryuuDNQmNAZWYNYNIeebimJd+o8cY5nO6/p3NhDBhmNp0AhADEpTggUBZJlXLrO6PW5Hgaj1nSSnMVATKzG8ZwuHDtiq2qkgAAqKKWQJRJGaL2ioVKGXt7kO8R6uWZq1ZltngU8DJy3Vef4OEbP3Luo3SG7giBe4JCKiGdjvXzNFqI8natVUA2jgFoxJCQSAt76Nh/o6G5J1gMgF4fSacHM64n5SYsppz9wGvdR5aZpFAsIYrSzh0kCYRJBRhqCf1Bsi1dI62S0W7C7kSjtMxj6WbPLFQThdniIRuh1KKzSGCkXAxlFn+W1HrhnC0fJL3NDd5pbkCq2pPVL98UzjrQEpvachaokFYoTQETtFgOKEIsQ/YyUoBD9xDdwJC0ESIJwRZADcuP1g9TCYAi499mNuvvYrPD5FkJAdUzokLGEKcYk0bNxoj3nqF5Qsvc4yjqWzkyHB2AVVHk/caOl7d3TlsDrn54Ij3nn2ce3cXvM9XoKHsTtb2KCaGl5d4bPfi832EuHyK+fIv8PK9E078CmZN2dooy1QRqOzCle3ZNa7BcUJwsBOeuKm879EzJL0JKKr01sBNv7bv8WS2NHF29iYfef/T73BU3h6TEUGT4XNf8Bc+/wUeTxDPzlgPOJZ2Ed+05MwSGuY8d935sx/8ED/0G1+bZLH8vp/5T/78n34EXzxF1WlWAleqL+/SuY6dp+OgQpAzjmYP+JmffprP/PiEC/gE2L6w19mMVZxjLihyoXXeos66agQCMUWunV6brEnXFleJTWi3Yc3zwKKBfheK5zW7z+aJ52A4sQVxq4Y+Y1IvYBJEIWlV93laDWjWVi/2zWygBEwIEEw5WE3nL8+bkDUPVWN3a3QlfzZjHapgVMorMV2kw3TYPgEAhp1Z9hPOnT09E9OLSdaa9dOh2g6Vw6gxAv01mvJJ14bKgWTvw9RGx++9G9i+JaCHPnewiRpM2f+k55RNKAPZRR8Gb/axTnHXNm3heG9gezVAdZEunM09t6mVgsIf9MiUqZBdRgNV3CzbJ9DuBnbLQPUK6i6mlOjfNRp7S7B9AiCQRGlavrBOJ0GxjZmd131tL84WwzQBkxVaXFWp5JR7JrfMM9/RUhRZ+EQMyu6dmCD4pKFuU2L7BIDASoSVKiudtSo3GDTF1aqsgHjmCerggOIaaAikSaeboskJkreuISsoBayQPu38r8xhWaICgSAJtbSNnb19bbpz/CH+5NHv5fXljNnS2nj5SiSlkiYVvH5WMo0IuAuqgdfnDc3VJ/irE7Xpg2cvIPduEXmRJiU0gK/t52shpjoNZTkXyhVmC0y/xdNnHwKuT9SqabB1AvDbV7+ff3XtNQ70vTSrroPFIw4lSog2IAOs5CFmNzDqjKW9xgePjR+ZqE0/fPbf0TsvcLOZ5y3hoIMdSl0npoBqApoYq4PAq7rkUyc3gR+eqFXTYOsE4PnD6/zx1e9h6Y+zOJjTKvySY2iSjas2vFqssHA5K2mmM+a8iM9fn6xNT508xyO3n+W7TleDLeCKzTAuyMYgJBKLowNenEeu3vvBydo0FbZOABoD4ozVElxmtL5+635lgscr9762q7dyJ4oyZdGSaA3RG6Iv0QtuXJcAuhbnsGvAk3Nwrpb49mPrBMAl+/Be9sfN1t253n593Qks73PQRSj3ma6zxY1Y6J92iFtyahjHT/FJOs/UCW75upEFnd4NbJ0A5EDaFWB5vfXCwa/l6refmbQBk93WvnNhqNcl4W10UolnkG7gs/C1Z264oDlb2thGKnArmUAvYd6tld3m9m8qUdUu3Apgyly+CpNyX9Gc4KmV6t3kGy4a4nz9fgl4exhtnOBwxnRMW+bbq+ovVTI08/U5CkgmzenrCjJZUQLdLkBXf2A9NCwbr4bnuMQtraO0dRogBwDNEWYdw1cLOLjm4W83fHpuYm//xYJzGk4na9NSFyRNvbhBGAw+tFN/fZgFQXHmZtBsnw2wdQKwcEAOSwy+l/Do/nquhW3rTDKpVKzlvYCVrrh3dH+yNt0/vsdKV91+PxsTPsP7cYpQI5UizsFqBQ9GluV9FzDZEvDzv/r7/jtff4mjw+sIM1YYXuLuBh0ifas5w6EQLI9y641jzlYRl4hbT9X2Aif7yRxt9mzJsrWUaOYLXki3+Kn/+kU/vfa7NLMX8nmFox9UCugNpPV2+sQSH7g/5/u/eQDpFh+IDZYCKqFQz7UtF636NaVLkNRwJIE3v/RvufO13/K7MebNpEFmUP9a6+IPeqGQSeFbqwXv/9Qn+dgv/KNJ1pTJBOAbr1zn+dcjjR+yasix7O7kDB96VvNwF929q3bpNqPxOc6cps2E6Tqg5tt5G0tPthmKms1BocoJZ5wd3+FPZs9x5/h/8uDKc6WzLdc1lkwbd5VDbbMuoCde54hr8xs8ce1NljpDZDbYfPJeYGi3AyldNF8pNaMJrqtw+tKrXHvtNldnM6xJXYAq9dp1TWdlcylPkDSLzINy+F0fGDVWfUwXFGqPcNIckfwYpJf14uUr3LIrVKCF2RPxnDdnRtD8PqWU1Wm29lqdKi5l8PPnxe7P/4oUjSEQYBHuczve5pWDl3hw+NJwca5hZBXFsxsk9QgczQ94I6y4Hk/wmDl8wwghQokJ9NLGQfBrnbYlRjCoQ9NwjHK8NIxF2SJ+e7fQxUnkSbJYNlyZzbkyoSkxoRdgSABSg1k20LK13LR/H0TLOiVxKlcW06BYarp0LimpWCLnRgVIe8+cSbQyI8SIJSclp+bYSU1KWK//0wve3KwXlN9WNd1vi+BgDYi2glhY/zL/87+tnpMiy5W3EM2DL3XZqh2Sv7dzKjrBDhjJGghZA+XsoGkwmQA4KRth9X37QwZd5I64Dxi6bFAJ5kZKXgIoSy+orN3/HBKgxgGKgubUsKixvVZcu0tq7P1F1UH7IYa9/2vdjazLlDuuebnJAyuDKP5N5HDumheIZc3lnoachfQEFGizoa3EofXrCE7IKE7mBeScN0FTrgxWffM2XBrIrpMP8vHEc569+JDEae26nrvXVfTuCBiVWRaekn+XvKFSshvoexSleNRFKeLtml6qjLtLyQpShIAZSAjl5HO+qrzcc2JnTQqtGkko1/ae53xKIZ8jkushhGLLTIXJBKCmLddBzFm764Zf/9g9REppMMOqZX9RFfKiW3LYhRkhhJyXKJ3Kbinb/tdW9GniwQbe2vetvc9ZPjkqSDWnobc3qdplTaJEcgiZW04MXSeS1nGeeykSkF729ZTV2SdlAkWElSScgJkTtFCnawbPIMNLQEXbgdeYVWuMscfwnbfmaXtwcYTQJWm4QNBucrYbM/U6673vP0CXokUtaYvlGgFAMkc1axtLNbmzvXijhfnJvWxQeUl5zHkFnbKrQlSDxrvwttKpWG+5sPp8E2EyATC/ipNQiTSWHzqnZVeVVbZp1tRunenJjShLZn4X0VPUE0iT69mwKTS9byYVM14IBIFVfI77vIzoPYRmeOHb9F11Lx1oVLk/j7x8ZcY3rh9xZXmNlDKZIzLLUUhrhSQrr1A9HvUcTjbDOVgl3tMkouXgUno/13NeSdv2npLtpKhztDGurqYrzy6f/sxtN1Je50oR53d6zB0heHgPX3/2Nm/elewrWw7RzhUu+09krQDUB85WvhJUmfEqn/q+I774KzdHi/g/fOnX/Muv/EtuvfcPuXf82sZs77iF8z8HePz+Df7irffz0zd/lJ/4c780uk1nP/p3/P5XvsrNZUOyM4KU2gFvVba+t9Vo7iwiyBOPc/iX/xL3tCTDVqfiEsf4W//tZNRD5QzgU5IfZdKz+PQaZ+0DdLOinwFbcuzKZACYhYaPPDVNRs8/ff9Pyn949VcdeYc/qCBtc4fM20GcZPAB5MNPczabwTKnmPcZv+7L169KZcQCinDgsHzlNe78569iIVILc1+6TJyFq2MfC9VIs6iFDGvWbBcXX0mSjXp90O7le4IQBFudMVXqs2gq+flrn/vmzG87XzohcLIQTIUzMUwle0eNdnRy2zDWiNIceuxWhSDbSnOUuYOl3MejNMByWQiRmq9eefZ3cixfngseVcubXnVL2tTptScbwD0RQsQ9MZum+lm98+DQfnrRV6zPQGkZnEnQKNlNtYZc8jnQldS9oEmWvQA04FbyCywBDbEIxBhaKFYXxqHrmXd6hLb4kpDTs9FYloBAY02xXs/TbUVA3BENJG8wsbyfPxHEIVz4owo9YgV6Ll9HXNkg8mc8jKzxUEFNy8Qpf2znR3+zTJFCankyujL8CdEIvSJYl0WUsuFSvv0hj6XtpZJWCEVKRUgpEyDnsiTt11mmTvUCRmYk+j+rCpvew6Ap7TVvzQWMQVcXqGnL2200YA11bKTSxzDQtmMRKzV5aYihUnx4ByvqP4T1+v9yziHQr6HvMm2AQtY+JZzzUjO50LGTtqf8v3hJG8NYB9kTNaKoFq/KtHnWpv36wWMQ4fJGBOTJKwLqp/k3gswIMdBYGpRr61BTvXKenxQOX+IMsROEaX+F9KJ50hqCrXkyjFOoHTtlJJfNDzmJgeXRFVar1aDKWPWQtLUJsp1Vfy9oHpSmaXIMpDlhtWIuOloTxD4xcwkTABDEzpjNHxBkkbd3SRxRqEuPg9lnVQC8snT5R5HchCuzO4hPV52bcv/13wQYPMNFNHErFNPZJHeANw4PmKcFMo8DCtwEcv3j2tauza5Fu5qiIhw3zqNO/hmxkQIaLzv4OVBBCDpD7A5/8699kD//UVgtyIWQKQa099bXnjNQnYPMjUOMYIsP8/d/8mB6Y2CAHhXcd04uwJSmyXf/4mflYzcecRWFVX8/opdn4PQEdkM6c6f+0Z9y+998mflwr/lSiGOMbkFJjXM8O+Wff3aKxXLi2d9r0sVU8vnImtGY0CkBQD/zdycRqXu/8Zv+yAOHNG5reLTNJSIo2/rTod3oDQb9HVv2Wxcz22IZcw3FsWbgyCfM62uybRWAITa27nv0RN3/r3GC9fgueKeTwISS/zBORU0g4kYIW9pLF+37vy107bh9sDZiZqQXMObi7MfqpPvTk2J9owU2+YC+UUr3i531/dQ2wFRQcXAbkkmXQByTS1czZbY062lr1fcUsLKN6s24n4+PjPihRgFUI7Z9GU/f8RCdg/iY4QMgXo3fHNkU5Ti+NvIeezwsXrl6yKErbjUI9nKIf/vHxu29iwjN6SOj7rHHw+Pxn/oxbjDDfNwSsH3VwifEJ/7gGf/mY89z98rdtz13nSIWhxunN3jqjad59plnv2Otie31c/b4/4K9AOw49gKw49gLwI5jLwA7jr0A7Dj2ArDj2AvAjmMvADuOvQDsOPYCsOPYC8COYy8AO469AOw49gKw49gLwI5jLwA7jr0A7Dj2ArDj2AvAjmMvADuOvQDsOPYCsOPYC8COYy8AO469AOw4/h/wSrOYtjllagAAAABJRU5ErkJggg==" alt="Logo" style="height: 45px; display: block; cursor: pointer; transition: opacity 0.3s ease, transform 0.3s ease;" 
+                         onmouseover="this.style.opacity='0.7'; this.style.transform='scale(1.05)';" 
+                         onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
+                </a>
+            </div>
+
+    <button id="btn-create-tour">Создать тур</button>
+    <input type="file" id="tour-file-input" accept="image/*" multiple>
+    </header>
+
+    <div id="tour-panel">
+        <div class="tp-head">Конструктор тура</div>
+        <div class="tp-section">
+            <div class="tp-lbl">Панорамы тура</div>
+            <div id="tour-pano-list"></div>
+            <button id="btn-tour-add-pano">＋ Добавить панораму</button>
+        </div>
+        <div class="tp-section">
+            <div class="tp-lbl">Точка перехода → на панораму:</div>
+            <select id="hotspot-target-select"><option value="">— выберите цель —</option></select>
+            <button id="btn-add-hotspot">⊕ Поставить точку</button>
+        </div>
+        <div class="tp-section" id="flare-tp-section" style="padding:0;overflow:hidden;">
+            <!-- Collapsible header -->
+            <div id="flare-section-header" onclick="
+                const body=document.getElementById('flare-section-body');
+                const arrow=document.getElementById('flare-arrow');
+                const open=body.style.display!=='none';
+                body.style.display=open?'none':'block';
+                arrow.style.transform=open?'rotate(-90deg)':'rotate(0deg)';
+            " style="display:flex;align-items:center;justify-content:space-between;
+                padding:10px 18px;cursor:pointer;user-select:none;
+                border-radius:6px;transition:background 0.15s;
+                background:rgba(255,255,255,0.03);">
+                <span class="tp-lbl" style="margin-bottom:0;">Sun &amp; Glare</span>
+                <span id="flare-arrow" style="font-size:10px;color:rgba(255,255,255,0.4);
+                    transition:transform 0.2s;display:inline-block;">▼</span>
+            </div>
+            <!-- Collapsible body (hidden by default) -->
+            <div id="flare-section-body" style="display:none;padding:10px 12px 12px;">
+                <select id="flare-type-select" >
+                <option value="none">— нет блика —</option>
+                <option value="glare">Только свечение</option>
+                <option value="penta">5-угольный (белый)</option>
+                <option value="penta2">5-угольный (оранжевый)</option>
+                <option value="octa">8-угольный</option>
+                <option value="round">Круглый</option>
+                <option value="rays">Круглый с лучами</option>
+            </select>
+            <div style="position:relative;margin-bottom:7px;">
+                <div id="flare-intensity-tip" style="
+                    display:none;position:absolute;top:-22px;
+                    background:rgba(255,216,74,0.15);border:1px solid rgba(255,216,74,0.4);
+                    color:#ffd84a;font-size:10px;font-weight:500;letter-spacing:0.5px;
+                    padding:2px 7px;border-radius:10px;pointer-events:none;
+                    transform:translateX(-50%);white-space:nowrap;
+                "></div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <span style="font-size:13px;opacity:0.6;">🌤</span>
+                    <input type="range" id="flare-intensity" min="1" max="100" value="60" style="flex:1;accent-color:#ffd84a;">
+                    <span style="font-size:15px;">☀</span>
+                </div>
+            </div>
+            <button id="btn-place-flare" title="Установить блик" style="width:100%;padding:8px;background:rgba(255,200,40,0.08);border:1px solid rgba(255,200,40,0.3);border-radius:5px;color:rgba(255,220,100,0.9);font-size:11px;cursor:pointer;transition:all 0.2s;letter-spacing:0.4px;margin-bottom:4px;">☀ Поставить</button>
+            </div>
+        </div>
+        <div class="tp-section">
+            <button id="btn-save-tour" disabled>Сохранить тур</button>
+            <div id="tour-save-status"></div>
+        </div>
+    </div>
+    <div id="placing-hint">Кликните на панораму — установите точку перехода</div>
+
+    <div id="viewer-container">
+        <div id="canvas-container"></div>
+        <canvas id="flare-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:50;"></canvas>
+    </div>
+
+    <div id="upload-overlay">
+        <div class="upload-area" id="upload-area">
+            <div class="upload-icon">⊕</div>
+            <div class="upload-text">Загрузите панораму 360°</div>
+            <div class="upload-subtext">Перетащите файл или нажмите для выбора<br>JPG, PNG <br><br>
+            </div>
+                <div class="loading-spinner-upload" id="loading-spinner-upload"></div>
+                <div id="upload-done-text" style="
+                    font-size:13px;font-weight:300;letter-spacing:1px;color:rgba(255,255,255,0.45);
+                    margin-top:10px;opacity:0;transition:opacity 0.4s ease;pointer-events:none;
+                ">Готово</div>
+            <input type="file" id="file-input" accept="image/*" multiple>
+        </div>
+    </div>
+
+    <div id="loading">
+        <div class="loader"></div>
+        <div id="loading-text">Загрузка...</div>
+        <div id="loading-progress"></div>
+    </div>
+
+    <div id="instructions">
+        Перемещайте мышью • Прокручивайте для зума
+    </div>
+
+    <div id="controls-panel">
+        <button class="control-btn" id="btn-upload" title="Загрузить панораму">⊕</button>
+        <button class="control-btn" id="btn-share" title="Поделиться">⤴</button>
+        <button class="control-btn" id="btn-reset" title="Сбросить вид">⟲</button>
+        <button class="control-btn" id="btn-fullscreen" title="Полный экран">⛶</button>
+        <button class="control-btn" id="btn-autorotate" title="Автоповорот">↻</button>
+        
+    </div>
+
+    <div id="thumbnails"></div>
+
+    <div id="share-modal">
+        <div class="modal-content">
+            <div class="modal-title">Поделиться панорамой</div>
+            <div class="share-link-container">
+                <input type="text" class="share-link" id="share-link" readonly>
+                <button class="copy-btn" id="copy-btn">Копировать</button>
+            </div>
+            <div class="modal-note">
+                
+            </div>
+            <button class="close-modal" id="close-modal">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+<!-- Edge: use Firefox/Chrome if Tracking Prevention blocks Three.js -->
+
+    <div id="hs-toast-overlay"></div>
+    <div id="hs-toast">
+        <div id="hs-toast-icon">⚠</div>
+        <div id="hs-toast-msg"></div>
+        <button id="hs-toast-btn">ОК</button>
+    </div>
+    <script>
+        // Яндекс.Диск Configuration
+        const YADISK_TOKEN = 'y0__xDJ6POKBhj04T0gsffishZQDuf4AraWHrHIevpRW4WoFh5-Jg';
+const YADISK_API   = 'https://cloud-api.yandex.net/v1/disk/resources';
+        const YADISK_FOLDER = 'panoramas';
+
+        // Global variables
+        let scene, camera, renderer, sphere, texture;
+        let isUserInteracting = false;
+        let onPointerDownMouseX = 0, onPointerDownMouseY = 0;
+        let lon = 0, onPointerDownLon = 0;
+        let lat = 0, onPointerDownLat = 0;
+        let phi = 0, theta = 0;
+        let autoRotate = false;
+        let currentPanoramas = [];
+        let currentIndex = 0;
+        let currentPanoramaUrl = null;
+        let currentShareKey = null; // permanent public_key for sharing
+
+        // Initialize Three.js
+        function init() {
+            const container = document.getElementById('canvas-container');
+
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.SphereGeometry(500, 60, 40);
+            geometry.scale(-1, 1, 1);
+
+            sphere = new THREE.Mesh(geometry);
+            scene.add(sphere);
+
+            document.addEventListener('pointerdown', onPointerDown);
+            document.addEventListener('pointermove', onPointerMove);
+            document.addEventListener('pointerup', onPointerUp);
+            document.addEventListener('wheel', onWheel);
+            window.addEventListener('resize', onWindowResize);
+
+            animate();
+            checkUrlParams();
+            initFlare();
+        }
+
+        // Check URL parameters for shared panoramas
+                // Direct URL loader — no fetch, Three.js loads via img tag (for CDN URLs)
+        function _loadPanoramaDirectUrl(url, filename) {
+            document.getElementById('loading').classList.add('visible');
+            document.getElementById('loading-text').textContent = 'Загрузка панорамы...';
+            document.getElementById('upload-overlay').classList.add('hidden');
+            const loader = new THREE.TextureLoader();
+            loader.setCrossOrigin('anonymous');
+            loader.load(url, (tex) => {
+                if (sphere.material) sphere.material.dispose();
+                sphere.material = new THREE.MeshBasicMaterial({ map: tex });
+                document.getElementById('loading').classList.remove('visible');
+                document.getElementById('instructions').style.display = 'none';
+            }, undefined, (err) => {
+                document.getElementById('loading').classList.remove('visible');
+                // Fallback to fetch approach
+                loadPanoramaFromUrl(url, filename);
+            });
+        }
+
+        async function checkUrlParams() {
+            const params      = new URLSearchParams(window.location.search);
+            const panoramaUrl = params.get('p');
+            const publicKey   = params.get('pk');
+
+            if (panoramaUrl || publicKey) {
+                document.getElementById('btn-upload').style.display = 'none';
+                document.getElementById('btn-share').style.display  = 'none';
+            }
+
+            // Fast path: direct URL (may expire)
+            if (panoramaUrl && !publicKey) {
+                try {
+                    await loadPanoramaFromUrl(decodeURIComponent(panoramaUrl));
+                    return;
+                } catch (e) {
+                    console.warn('[Share] direct url failed:', e);
+                }
+            }
+
+            // Основной путь: получить прямую ссылку по постоянному publicKey
+            if (publicKey) {
+                document.getElementById('loading').classList.add('visible');
+                document.getElementById('loading-text').textContent = 'Загрузка панорамы...';
+                await loadSharePanorama(decodeURIComponent(publicKey));
+                return;
+            }
+        }
+// Upload to Cloudinary
+        // Конвертация в JPEG 95% через canvas (PNG→JPEG, сохранение качества)
+        async function convertToJpeg(file) {
+            return new Promise((resolve) => {
+                // Если уже JPEG и меньше 15MB — не конвертируем
+                if (file.type === 'image/jpeg' && file.size < 15 * 1024 * 1024) {
+                    resolve(file);
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width  = img.width;
+                        canvas.height = img.height;
+                        canvas.getContext('2d').drawImage(img, 0, 0);
+                        canvas.toBlob((blob) => {
+                            if (!blob) { resolve(file); return; }
+                            const converted = new File(
+                                [blob],
+                                file.name.replace(/\.[^.]+$/, '') + '.jpg',
+                                { type: 'image/jpeg', lastModified: Date.now() }
+                            );
+                            const origMB = (file.size / 1024 / 1024).toFixed(1);
+                            const newMB  = (converted.size / 1024 / 1024).toFixed(1);
+                            console.log(`[Convert] ${file.name}: ${origMB}MB → ${newMB}MB JPEG 95%`);
+                            resolve(converted);
+                        }, 'image/jpeg', 0.95);
+                    };
+                    img.onerror = () => resolve(file);
+                    img.src = e.target.result;
+                };
+                reader.onerror = () => resolve(file);
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function uploadToYaDisk(file, fileName) {
+            return new Promise(async (resolve, reject) => {
+                document.getElementById('loading').classList.add('visible');
+                document.getElementById('loading-text').textContent = 'Сохранение...';
+                document.getElementById('loading-progress').textContent = '0%';
+                const filePath = YADISK_FOLDER + '/' + fileName;
+                try {
+                    // Создаём папку если нет
+                    await fetch(YADISK_API + '?path=' + encodeURIComponent(YADISK_FOLDER), {
+                        method: 'PUT', headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN }
+                    });
+                    // URL для загрузки
+                    const urlResp = await fetch(
+                        YADISK_API + '/upload?path=' + encodeURIComponent(filePath) + '&overwrite=true',
+                        { headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN } }
+                    );
+                    if (!urlResp.ok) throw new Error('Ошибка URL загрузки: ' + urlResp.status);
+                    const { href: uploadUrl } = await urlResp.json();
+                    // Загрузка файла с прогрессом
+                    await new Promise((res2, rej2) => {
+                        const xhr = new XMLHttpRequest();
+                        xhr.upload.addEventListener('progress', (e) => {
+                            if (e.lengthComputable)
+                                document.getElementById('loading-progress').textContent =
+                                    Math.round(e.loaded / e.total * 100) + '%';
+                        });
+                        xhr.addEventListener('load', () => (xhr.status >= 200 && xhr.status < 300) ? res2() : rej2(new Error('HTTP ' + xhr.status)));
+                        xhr.addEventListener('error', () => rej2(new Error('Ошибка сети')));
+                        xhr.open('PUT', uploadUrl);
+                        xhr.send(file);
+                    });
+                    // Публикуем
+                    await fetch(YADISK_API + '/publish?path=' + encodeURIComponent(filePath), {
+                        method: 'PUT', headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN }
+                    });
+                    // Получаем public_url
+                    const metaResp = await fetch(
+                        YADISK_API + '?path=' + encodeURIComponent(filePath) + '&fields=public_url',
+                        { headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN } }
+                    );
+                    const meta = await metaResp.json();
+                    // Прямая ссылка на скачивание
+                    const dlResp = await fetch(
+                        'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=' +
+                        encodeURIComponent(meta.public_url),
+                        { headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN } }
+                    );
+                    const { href: directUrl } = await dlResp.json();
+                    document.getElementById('loading').classList.remove('visible');
+                    console.log('[YaDisk] Upload done. secure_url:', directUrl, 'public_key:', meta.public_url);
+                    resolve({ secure_url: directUrl, public_id: fileName, public_key: meta.public_url });
+                } catch(err) {
+                    document.getElementById('loading').classList.remove('visible');
+                    reject(err);
+                }
+            });
+        }
+
+        // Load panorama from URL
+        
+        // Загрузка панорамы по ссылке «Поделиться» через цепочку CORS-прокси
+        async function loadSharePanorama(publicKey) {
+            const showErr = (msg) => {
+                document.getElementById('loading').classList.remove('visible');
+                alert('Ошибка загрузки панорамы: ' + msg);
+            };
+            try {
+                // Шаг 1: получаем прямой URL файла через Яндекс публичный API
+                document.getElementById('loading-text').textContent = 'Получение ссылки...';
+                const apiUrl = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key='
+                    + encodeURIComponent(publicKey);
+                const apiResp = await fetch(apiUrl);
+                if (!apiResp.ok) throw new Error('Яндекс API вернул: ' + apiResp.status);
+                const apiData = await apiResp.json();
+                const directUrl = apiData && apiData.href;
+                if (!directUrl) throw new Error('Пустой ответ от Яндекс API');
+
+                // Шаг 2: скачиваем файл через цепочку CORS-прокси
+                // (Яндекс CDN не отдаёт CORS заголовки для файлов)
+                const proxies = [
+                    u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+                    u => 'https://corsproxy.io/?' + encodeURIComponent(u),
+                    u => 'https://proxy.cors.sh/' + u,
+                    u => 'https://thingproxy.freeboard.io/fetch/' + u,
+                ];
+
+                let blob = null;
+                for (let i = 0; i < proxies.length; i++) {
+                    try {
+                        document.getElementById('loading-text').textContent =
+                            'Загрузка... (' + (i + 1) + '/' + proxies.length + ')';
+                        const r = await fetch(proxies[i](directUrl));
+                        if (!r.ok) { console.warn('Proxy', i+1, 'HTTP', r.status); continue; }
+                        const b = await r.blob();
+                        if (b && b.size > 5000) { blob = b; console.log('Proxy', i+1, 'OK, size:', b.size); break; }
+                    } catch(proxyErr) {
+                        console.warn('Proxy', i+1, 'error:', proxyErr.message);
+                    }
+                }
+
+                if (!blob) throw new Error('Все прокси недоступны. Попробуйте позже.');
+
+                const blobUrl = URL.createObjectURL(blob);
+                await loadPanoramaFromUrl(blobUrl, 'Панорама');
+
+            } catch(e) {
+                showErr(e.message || String(e));
+            }
+        }
+
+async function loadPanoramaFromUrl(url, filename = 'Панорама') {
+            console.log('[loadPanorama] called with url:', url);
+            document.getElementById('loading').classList.add('visible');
+            document.getElementById('loading-text').textContent = 'Загрузка панорамы...';
+            document.getElementById('loading-progress').textContent = '';
+            document.getElementById('instructions').style.display = 'none';
+
+            try {
+                let blobUrl;
+
+                if (url && url.includes('downloader.disk.yandex.ru')) {
+                    // Direct CDN URL — fetch without auth (public file, no CORS preflight)
+                    document.getElementById('loading-text').textContent = 'Скачивание...';
+                    const resp = await fetch(url);
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    const blob = await resp.blob();
+                    if (blob.size < 1000) throw new Error('Файл слишком маленький: ' + blob.size);
+                    blobUrl = URL.createObjectURL(blob);
+                } else if (url && (url.includes('cloud-api.yandex.net') || url.includes('yadi.sk'))) {
+                    // API / share URL — fetch with auth token
+                    document.getElementById('loading-text').textContent = 'Скачивание с Яндекс.Диска...';
+                    const resp = await fetch(url, {
+                        headers: { 'Authorization': 'OAuth ' + YADISK_TOKEN }
+                    });
+                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                    const blob = await resp.blob();
+                    if (blob.size < 1000) throw new Error('Файл слишком маленький: ' + blob.size);
+                    blobUrl = URL.createObjectURL(blob);
+                } else {
+                    // Локальный blob URL — используем напрямую
+                    blobUrl = url;
+                }
+
+                // Загружаем через Image → Canvas → THREE.Texture
+                const img = new Image();
+                img.onload = function() {
+                    // Ресайз через canvas если изображение слишком большое для WebGL
+                    let source = img;
+                    const MAX = 8192;
+                    if (img.width > MAX || img.height > MAX) {
+                        const scale = Math.min(MAX / img.width, MAX / img.height);
+                        const canvas = document.createElement('canvas');
+                        canvas.width  = Math.floor(img.width  * scale);
+                        canvas.height = Math.floor(img.height * scale);
+                        canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+                        source = canvas;
+                        console.log('[Panorama] Resized to', canvas.width, 'x', canvas.height);
+                    }
+
+                    const texture = new THREE.Texture(source);
+                    texture.needsUpdate = true;
+                    if (sphere && sphere.material) sphere.material.dispose();
+                    if (sphere) sphere.material = new THREE.MeshBasicMaterial({ map: texture });
+                    if (url !== blobUrl) URL.revokeObjectURL(blobUrl);
+
+                    const loadEl  = document.getElementById('loading');
+                    const textEl  = document.getElementById('loading-text');
+                    const progEl  = document.getElementById('loading-progress');
+                    const ovEl    = document.getElementById('upload-overlay');
+                    const ctrlEl  = document.getElementById('controls-panel');
+                    const nameEl  = document.getElementById('info-filename');
+                    const shareEl = document.getElementById('btn-share');
+
+                    if (loadEl)  loadEl.classList.remove('visible');
+                    if (textEl)  textEl.textContent = 'Загрузка...';
+                    if (progEl)  progEl.textContent = '';
+                    if (ovEl)    ovEl.classList.add('hidden');
+                    if (ctrlEl && !tourMode)  ctrlEl.classList.add('visible');
+                    if (nameEl)  nameEl.textContent = filename;
+                    if (shareEl) shareEl.classList.add('visible');
+                    currentPanoramaUrl = url;
+                    console.log('[Panorama] ✅ Loaded successfully', img.width, 'x', img.height);
+                };
+                img.onerror = function() {
+                    const loadEl = document.getElementById('loading');
+                    if (loadEl) loadEl.classList.remove('visible');
+                    console.error('[Panorama] Image load error');
+                    alert('Ошибка загрузки изображения');
+                };
+                img.src = blobUrl;
+            } catch(e) {
+                document.getElementById('loading').classList.remove('visible');
+                document.getElementById('loading-text').textContent = 'Ошибка загрузки';
+                console.error('[Panorama] Error:', e);
+                alert('Ошибка загрузки панорамы: ' + e.message);
+            }
+        }
+
+            // Load panoramas from file input
+    async function loadPanoramas(files) {
+        if (!files || files.length === 0) return;
+
+        currentPanoramas = Array.from(files);
+        currentIndex = 0;
+        const thumbnailsContainer = document.getElementById('thumbnails');
+        thumbnailsContainer.innerHTML = '';
+
+        try {
+            const file = files[0];
+
+            // Показываем spinner
+            const spinner = document.getElementById('loading-spinner-upload');
+            if (spinner) spinner.classList.add('active');
+
+            
+
+            // Конвертируем в JPEG 95% если нужно
+            document.getElementById('loading-text').textContent = 'Подготовка файла...';
+            const fileToUpload = await convertToJpeg(file);
+
+            // Загружаем на Яндекс.Диск
+            const response = await uploadToYaDisk(fileToUpload, (fileToUpload.name||'panorama').replace(/[^a-zA-Z0-9_-]/g,'_')+'_'+Date.now()+'.jpg');
+
+            // Скрываем spinner + показываем "Готово"
+            if (spinner) spinner.classList.remove('active');
+            const _doneEl = document.getElementById('upload-done-text');
+            if (_doneEl) {
+                _doneEl.style.opacity = '1';
+                setTimeout(() => { _doneEl.style.opacity = '0'; }, 2000);
+            }
+
+            // Use secure_url from Cloudinary response
+            const cloudinaryUrl = response.secure_url;
+            currentPanoramaUrl = cloudinaryUrl;
+            currentShareKey = response.public_key || null;
+
+            // Save to localStorage for history
+            const savedPanoramas = JSON.parse(localStorage.getItem('yadiskPanoramas') || '[]');
+            savedPanoramas.unshift({
+                url: cloudinaryUrl,
+                name: file.name,
+                publicId: response.public_id,
+                uploadedAt: new Date().toISOString(),
+                size: file.size
+            });
+
+            // Keep only last 20
+            if (savedPanoramas.length > 20) {
+                savedPanoramas.pop();
+            }
+            localStorage.setItem('yadiskPanoramas', JSON.stringify(savedPanoramas));
+
+            // Load panorama from local blob (avoids CORS re-fetch from Yandex on GitHub Pages)
+            const localBlobUrl = URL.createObjectURL(fileToUpload);
+            loadPanoramaFromUrl(localBlobUrl, file.name);
+
+            // Create thumbnails for multiple files
+            if (files.length > 1) {
+                currentPanoramas.forEach((file, index) => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.className = 'thumbnail';
+                        if (index === 0) img.classList.add('active');
+                        img.addEventListener('click', () => switchPanorama(index));
+                        thumbnailsContainer.appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            const spinner = document.getElementById('loading-spinner-upload');
+            if (spinner) spinner.classList.remove('active');
+            document.getElementById('loading').classList.remove('visible');
+            alert('Ошибка загрузки на Яндекс.Диск: ' + error.message);
+        }
+    }
+
+    
+
+        // Switch panorama
+        async function switchPanorama(index) {
+            currentIndex = index;
+            const file = currentPanoramas[index];
+
+            try {
+                const response = await uploadToYaDisk(file, (file.name||'panorama').replace(/[^a-zA-Z0-9_-]/g,'_')+'_'+Date.now()+'.jpg');
+                const cloudinaryUrl = response.secure_url;
+                currentPanoramaUrl = cloudinaryUrl;
+
+                loadPanoramaFromUrl(cloudinaryUrl, file.name);
+
+                document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === index);
+                });
+            } catch (error) {
+                console.error('Upload error:', error);
+                alert(`Ошибка загрузки панорамы: ${error.message}`);
+            }
+        }
+
+        // Generate share link
+        function generateShareLink() {
+            if (!currentPanoramaUrl && !currentShareKey) {
+                alert('Нет панорамы для публикации');
+                return null;
+            }
+            const baseUrl = window.location.origin + window.location.pathname;
+            // Используем ТОЛЬКО постоянный publicKey (не истекает), иначе directUrl
+            if (currentShareKey) {
+                return `${baseUrl}?pk=${encodeURIComponent(currentShareKey)}`;
+            }
+            return `${baseUrl}?p=${encodeURIComponent(currentPanoramaUrl)}`;
+        }
+            
+
+        // Share functionality
+        function shareCurrentPanorama() {
+            const shareUrl = generateShareLink();
+
+            if (!shareUrl) return;
+
+            document.getElementById('share-link').value = shareUrl;
+            document.getElementById('share-modal').classList.add('visible');
+        }
+
+        // Pointer events
+        function onPointerDown(event) {
+            if (event.target.closest('#share-modal')) return;
+            if (event.target.closest('#tour-panel')) return;
+
+            isUserInteracting = true;
+            onPointerDownMouseX = event.clientX;
+            onPointerDownMouseY = event.clientY;
+            onPointerDownLon = lon;
+            onPointerDownLat = lat;
+            autoRotate = false;
+            document.getElementById('btn-autorotate').style.opacity = '0.7';
+        }
+
+        function onPointerMove(event) {
+            if (isUserInteracting) {
+                lon = (onPointerDownMouseX - event.clientX) * 0.1 + onPointerDownLon;
+                lat = (onPointerDownMouseY - event.clientY) * 0.1 + onPointerDownLat;
+                lat = Math.max(-85, Math.min(85, lat));
+                updateInfoPanel();
+            }
+        }
+
+        function onPointerUp() {
+            isUserInteracting = false;
+        }
+
+        function onWheel(event) {
+            event.preventDefault();
+            camera.fov += event.deltaY * 0.05;
+            camera.fov = Math.max(30, Math.min(120, camera.fov));
+            camera.updateProjectionMatrix();
+            updateInfoPanel();
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function updateCamera() {
+            if (autoRotate) {
+                lon += 0.1;
+            }
+
+            lat = Math.max(-85, Math.min(85, lat));
+            phi = THREE.MathUtils.degToRad(90 - lat);
+            theta = THREE.MathUtils.degToRad(lon);
+
+            camera.position.x = 100 * Math.sin(phi) * Math.cos(theta);
+            camera.position.y = 100 * Math.cos(phi);
+            camera.position.z = 100 * Math.sin(phi) * Math.sin(theta);
+            camera.lookAt(scene.position);
+        }
+
+        function updateInfoPanel() {
+            const fovEl = document.getElementById('info-fov');
+            const posEl = document.getElementById('info-position');
+            if (fovEl) fovEl.textContent = Math.round(camera.fov) + '°';
+            if (posEl) posEl.textContent = Math.round(lon % 360) + '°, ' + Math.round(lat) + '°';
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            updateCamera();
+            renderer.render(scene, camera);
+            if (typeof drawFlare === 'function') drawFlare();
+            if (typeof _updateFlareDotPos === 'function') _updateFlareDotPos();
+        }
+
+        // Upload handling
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                loadPanoramas(e.target.files);
+            }
+        });
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragging');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragging');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragging');
+            if (e.dataTransfer.files.length > 0) {
+                loadPanoramas(e.dataTransfer.files);
+            }
+        });
+
+        // Control buttons
+        document.getElementById('btn-upload').addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        document.getElementById('btn-share').addEventListener('click', shareCurrentPanorama);
+
+        document.getElementById('btn-reset').addEventListener('click', () => {
+            lon = 0;
+            lat = 0;
+            camera.fov = 75;
+            camera.updateProjectionMatrix();
+            updateInfoPanel();
+        });
+
+        document.getElementById('btn-fullscreen').addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        document.getElementById('btn-autorotate').addEventListener('click', (e) => {
+            autoRotate = !autoRotate;
+            e.target.style.opacity = autoRotate ? '1' : '0.7';
+        });
+
+        
+
+        // Share modal
+        document.getElementById('copy-btn').addEventListener('click', () => {
+            const linkInput = document.getElementById('share-link');
+            linkInput.select();
+
+            try {
+                navigator.clipboard.writeText(linkInput.value).then(() => {
+                    const btn = document.getElementById('copy-btn');
+                    btn.textContent = 'Скопировано!';
+                    setTimeout(() => {
+                        btn.textContent = 'Копировать';
+                    }, 2000);
+                }).catch(() => {
+                    document.execCommand('copy');
+                    const btn = document.getElementById('copy-btn');
+                    btn.textContent = 'Скопировано!';
+                    setTimeout(() => {
+                        btn.textContent = 'Копировать';
+                    }, 2000);
+                });
+            } catch (error) {
+                console.error('Copy failed:', error);
+            }
+        });
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('share-modal').classList.remove('visible');
+        });
+
+        document.getElementById('share-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'share-modal') {
+                document.getElementById('share-modal').classList.remove('visible');
+            }
+        });
+
+        // Initialize
+
+        // ╔══════════════════════════════════════════════════════════╗
+        // ║         LENS FLARE SYSTEM — Kuula-style v3              ║
+        // ╚══════════════════════════════════════════════════════════╝
+        let flareData  = {};    // { panoramaId: {lon,lat,type,intensity} }
+        let flareMode  = null;  // 'place' | 'move' | null
+        let flareCanvas, flareCtx;
+
+        function initFlare() {
+            flareCanvas = document.getElementById('flare-canvas');
+            if (!flareCanvas) return;
+            flareCtx = flareCanvas.getContext('2d');
+            resizeFlareCanvas();
+            window.addEventListener('resize', resizeFlareCanvas);
+
+            document.getElementById('btn-place-flare').addEventListener('click', () => {
+                _flarePlacing ? _stopPlaceMode() : _startPlaceMode();
+            });
+            document.getElementById('flare-type-select').addEventListener('change', (e) => {
+                const fd = getFlare();
+                if (fd) fd.type = e.target.value;
+            });
+            const _fiSlider = document.getElementById('flare-intensity');
+            const _fiTip    = document.getElementById('flare-intensity-tip');
+            let   _fiTimer  = null;
+            function _updateFiTip() {
+                const val  = parseInt(_fiSlider.value);
+                const min  = parseInt(_fiSlider.min);
+                const max  = parseInt(_fiSlider.max);
+                const pct  = (val - min) / (max - min);
+                // Measure actual slider track (subtract thumb half-widths ~7px each side)
+                const rect  = _fiSlider.getBoundingClientRect();
+                const thumb = 7;
+                const left  = rect.left - _fiSlider.parentElement.getBoundingClientRect().left
+                              + thumb + pct * (rect.width - thumb * 2);
+                _fiTip.textContent  = val;
+                _fiTip.style.left   = left + 'px';
+                _fiTip.style.display = 'block';
+                clearTimeout(_fiTimer);
+            }
+            _fiSlider.addEventListener('input', (e) => {
+                const fd = getFlare();
+                if (fd) fd.intensity = parseInt(e.target.value) / 100;
+                _updateFiTip();
+            });
+            _fiSlider.addEventListener('pointerup', () => {
+                clearTimeout(_fiTimer);
+                _fiTimer = setTimeout(() => { _fiTip.style.display = 'none'; }, 200);
+            });
+            _fiSlider.addEventListener('pointerdown', () => {
+                clearTimeout(_fiTimer);
+            });
+        }
+
+        function resizeFlareCanvas() {
+            if (!flareCanvas) return;
+            flareCanvas.width  = window.innerWidth;
+            flareCanvas.height = window.innerHeight;
+        }
+
+        function getFlare() { return tourCurrentId ? flareData[tourCurrentId] : null; }
+
+        function setFlareStatus(msg) {
+            const el = document.getElementById('flare-status');
+            if (el) el.textContent = msg;
+        }
+
+        function syncFlareUI() {
+            const fd = getFlare();
+            const sel = document.getElementById('flare-type-select');
+            const rng = document.getElementById('flare-intensity');
+            if (sel) sel.value = fd ? fd.type : 'none';
+            if (rng) rng.value = fd ? Math.round(fd.intensity * 100) : 60;
+            setFlareStatus(fd ? '☀ Блик установлен' : '');
+            _renderFlareDot();
+        }
+
+        function deleteFlare() {
+            if (tourCurrentId && flareData[tourCurrentId]) {
+                delete flareData[tourCurrentId];
+                _removeFlareDot();
+                syncFlareUI();
+                setFlareStatus('');
+            }
+        }
+
+        // ── Flare DOM dot (drag-and-drop like hotspots) ───────────────
+        let _flareDot = null;
+        let _flareDragging = false;
+        let _flareDragMoved = false;
+
+        function _removeFlareDot() {
+            if (_flareDot) { _flareDot.remove(); _flareDot = null; }
+        }
+
+        function _renderFlareDot() {
+            _removeFlareDot();
+            const fd = getFlare();
+            if (!fd || !tourMode) return;
+            const dot = document.createElement('div');
+            dot.id = 'flare-sun-dot';
+            dot.style.cssText = 'position:fixed;width:38px;height:38px;display:flex;' +
+                'align-items:center;justify-content:center;cursor:grab;z-index:200;' +
+                'transform:translate(-50%,-50%);user-select:none;pointer-events:all;';
+            dot.innerHTML = `
+                <div style="position:relative;width:38px;height:38px;">
+                    <div style="position:absolute;inset:0;border-radius:50%;
+                        background:radial-gradient(circle,rgba(255,230,60,0.55) 0%,rgba(255,180,0,0.15) 60%,transparent 100%);
+                        border:2px solid rgba(255,220,60,0.8);animation:flarePulse 2s infinite;"></div>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+                        font-size:18px;line-height:1;">☀</div>
+                    <div class="dot-delete-btn" style="position:absolute;top:-6px;right:-6px;
+                        width:16px;height:16px;border-radius:50%;background:rgba(200,50,50,0.85);
+                        color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;
+                        cursor:pointer;border:1px solid rgba(255,100,100,0.5);">✕</div>
+                </div>`;
+            dot.style.display = 'none';
+            document.body.appendChild(dot);
+            _flareDot = dot;
+
+            // Delete btn
+            dot.querySelector('.dot-delete-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                deleteFlare();
+            });
+
+            // Drag — pointer events
+            dot.addEventListener('pointerdown', (e) => {
+                if (e.target.classList.contains('dot-delete-btn')) return;
+                e.stopPropagation();
+                e.preventDefault();
+                _flareDragging = true;
+                _flareDragMoved = false;
+                dot.style.cursor = 'grabbing';
+                dot.setPointerCapture(e.pointerId);
+            });
+            dot.addEventListener('pointermove', (e) => {
+                if (!_flareDragging) return;
+                e.stopPropagation();
+                _flareDragMoved = true;
+                // Move dot visually
+                dot.style.left = e.clientX + 'px';
+                dot.style.top  = e.clientY + 'px';
+                // Update lon/lat in realtime so drawFlare follows cursor
+                if (tourCurrentId && flareData[tourCurrentId]) {
+                    const {lon, lat} = _screenToLonLat(e.clientX, e.clientY);
+                    flareData[tourCurrentId].lon = lon;
+                    flareData[tourCurrentId].lat = lat;
+                }
+            });
+            dot.addEventListener('pointerup', (e) => {
+                if (!_flareDragging) return;
+                _flareDragging = false;
+                dot.style.cursor = 'grab';
+                if (_flareDragMoved && tourCurrentId && flareData[tourCurrentId]) {
+                    // Save new lon/lat from final drop position
+                    const {lon, lat} = _screenToLonLat(e.clientX, e.clientY);
+                    flareData[tourCurrentId].lon = lon;
+                    flareData[tourCurrentId].lat = lat;
+                    setFlareStatus('');
+                }
+            });
+        }
+
+        // Update flare dot screen position every frame (like hotspots hsLoop)
+        function _updateFlareDotPos() {
+            if (!_flareDot || !getFlare()) return;
+            if (_flareDragging) return; // don't fight drag
+            const fd = getFlare();
+            const {x, y, behind} = lonLatToScreen(fd.lon, fd.lat);
+            if (behind) {
+                _flareDot.style.display = 'none';
+            } else {
+                _flareDot.style.display = 'flex';
+                _flareDot.style.left = x + 'px';
+                _flareDot.style.top  = y + 'px';
+            }
+        }
+
+        // Place flare on canvas click (place mode)
+        function _onFlareCanvasClick(e) {
+            const {lon, lat} = _screenToLonLat(e.clientX, e.clientY);
+            if (!tourCurrentId) { _stopPlaceMode(); return; }
+            const type      = document.getElementById('flare-type-select').value;
+            const intensity = parseInt(document.getElementById('flare-intensity').value) / 100;
+            flareData[tourCurrentId] = {
+                lon, lat,
+                type: type === 'none' ? 'round' : type,
+                intensity
+            };
+            if (type === 'none') document.getElementById('flare-type-select').value = 'round';
+            _stopPlaceMode();
+            _renderFlareDot();
+            setFlareStatus('');
+        }
+
+        let _flarePlacing = false;
+        function _startPlaceMode() {
+            _flarePlacing = true;
+            document.body.style.cursor = 'crosshair';
+            const b = document.getElementById('btn-place-flare');
+            b.textContent = '✕ Отмена';
+            b.style.borderColor = 'rgba(255,100,100,0.5)';
+            setFlareStatus('');
+            const hint = document.getElementById('placing-hint');
+            if (hint) { hint.textContent = '☀ Кликните на источник света'; hint.style.display = 'block'; }
+        }
+        function _stopPlaceMode() {
+            _flarePlacing = false;
+            document.body.style.cursor = '';
+            const b = document.getElementById('btn-place-flare');
+            if (b) { b.textContent = '☀ Поставить'; b.style.borderColor = 'rgba(255,200,40,0.3)'; }
+            if (!getFlare()) setFlareStatus('');
+            const hint = document.getElementById('placing-hint');
+            if (hint) hint.style.display = 'none';
+        }
+
+        function lonLatToScreen(flon, flat) {
+            const phi   = THREE.MathUtils.degToRad(90 - flat);
+            const theta = THREE.MathUtils.degToRad(flon);
+            // Use radius=500 matching the panorama sphere
+            const vec = new THREE.Vector3(
+                500 * Math.sin(phi) * Math.cos(theta),
+                500 * Math.cos(phi),
+                500 * Math.sin(phi) * Math.sin(theta)
+            );
+            const projected = vec.clone().project(camera);
+            return {
+                x:      ( projected.x * 0.5 + 0.5) * window.innerWidth,
+                y:      (-projected.y * 0.5 + 0.5) * window.innerHeight,
+                behind: projected.z > 1
+            };
+        }
+
+        // ── Draw sun icon on flare position (always visible in edit mode) ──
+        function drawFlareDot(x, y) {
+            const r = 18;
+            flareCtx.save();
+            flareCtx.beginPath();
+            flareCtx.arc(x, y, r, 0, Math.PI*2);
+            flareCtx.fillStyle = 'rgba(255,220,60,0.25)';
+            flareCtx.fill();
+            flareCtx.strokeStyle = 'rgba(255,220,60,0.85)';
+            flareCtx.lineWidth = 2;
+            flareCtx.stroke();
+            // rays around dot
+            for (let i=0; i<8; i++) {
+                const a = (Math.PI*2/8)*i;
+                flareCtx.beginPath();
+                flareCtx.moveTo(x + Math.cos(a)*(r+3), y + Math.sin(a)*(r+3));
+                flareCtx.lineTo(x + Math.cos(a)*(r+9), y + Math.sin(a)*(r+9));
+                flareCtx.strokeStyle = 'rgba(255,220,60,0.7)';
+                flareCtx.lineWidth = 1.5;
+                flareCtx.stroke();
+            }
+            flareCtx.restore();
+        }
+
+        function drawFlare() {
+            if (!flareCtx) return;
+            flareCtx.clearRect(0, 0, flareCanvas.width, flareCanvas.height);
+            const fd = getFlare();
+            if (!fd) return;
+
+            const {x, y, behind} = lonLatToScreen(fd.lon, fd.lat);
+            const tourOpen = document.getElementById('tour-panel')?.classList.contains('visible');
+            if (tourOpen && !behind) drawFlareDot(x, y);
+            if (fd.type === 'none') return;
+            if (behind) return;
+
+            const W = flareCanvas.width, H = flareCanvas.height;
+            const cx = W/2, cy = H/2;
+            const dx = cx - x, dy = cy - y;
+            const dist    = Math.sqrt(dx*dx + dy*dy);
+            const maxDist = Math.sqrt(cx*cx + cy*cy);
+            const viewInt = Math.max(0, 1 - dist / (maxDist * 0.9));
+            const base    = fd.intensity ?? 0.6;
+            const alpha   = Math.min(1, 0.04 + viewInt * base);
+            const t       = Date.now() * 0.0006; // for subtle shimmer
+
+            // subtle shimmer multiplier
+            const shimmer = 1 + Math.sin(t) * 0.04 * viewInt;
+
+            // ── 1. SOFT ATMOSPHERIC VIGNETTE GLOW ─────────────────────────
+            // Very large diffuse bloom — fills screen edge softly
+            if (viewInt > 0.1) {
+                const vg = flareCtx.createRadialGradient(x, y, 0, x, y, Math.max(W,H) * 1.1);
+                vg.addColorStop(0,    `rgba(255,240,180,${(0.12 * viewInt * base).toFixed(3)})`);
+                vg.addColorStop(0.25, `rgba(255,220,120,${(0.07 * viewInt * base).toFixed(3)})`);
+                vg.addColorStop(1,    'rgba(255,180,60,0)');
+                flareCtx.fillStyle = vg;
+                flareCtx.fillRect(0, 0, W, H);
+            }
+
+            // ── 2. LAYERED BLOOM (tight + wide) ───────────────────────────
+            [
+                { r: W*0.55, a: 0.30, c:'255,242,195' },
+                { r: W*0.28, a: 0.38, c:'255,228,160' },
+                { r: W*0.12, a: 0.50, c:'255,215,130' },
+                { r: W*0.055,a: 0.65, c:'255,248,210' },
+                { r: W*0.022,a: 0.80, c:'255,255,240' },
+            ].forEach(bl => {
+                const r = bl.r * viewInt * base * shimmer;
+                if (r < 3) return;
+                const g = flareCtx.createRadialGradient(x, y, 0, x, y, r);
+                g.addColorStop(0,   `rgba(${bl.c},${(bl.a * viewInt * base).toFixed(3)})`);
+                g.addColorStop(0.4, `rgba(${bl.c},${(bl.a * viewInt * base * 0.3).toFixed(3)})`);
+                g.addColorStop(1,   `rgba(${bl.c},0)`);
+                flareCtx.fillStyle = g;
+                flareCtx.beginPath();
+                flareCtx.arc(x, y, r, 0, Math.PI*2);
+                flareCtx.fill();
+            });
+
+            if (fd.type === 'glare') return;
+
+            // ── 3. ANAMORPHIC STREAK ──────────────────────────────────────
+            if (viewInt > 0.04) {
+                const sa = viewInt * base * 0.60 * shimmer;
+                const sw = W * 0.95 * viewInt * base;
+                const sh = 1.5 + viewInt * 3.5 * base;
+
+                // Blue streak core
+                const sg = flareCtx.createLinearGradient(x - sw, y, x + sw, y);
+                sg.addColorStop(0,    'rgba(80,130,255,0)');
+                sg.addColorStop(0.18, `rgba(120,170,255,${sa*0.45})`);
+                sg.addColorStop(0.42, `rgba(190,220,255,${sa*0.80})`);
+                sg.addColorStop(0.50, `rgba(240,250,255,${sa})`);
+                sg.addColorStop(0.58, `rgba(190,220,255,${sa*0.80})`);
+                sg.addColorStop(0.82, `rgba(120,170,255,${sa*0.45})`);
+                sg.addColorStop(1,    'rgba(80,130,255,0)');
+                flareCtx.save();
+                flareCtx.shadowColor = `rgba(140,190,255,${sa*0.6})`;
+                flareCtx.shadowBlur  = 8;
+                flareCtx.fillStyle   = sg;
+                flareCtx.fillRect(x-sw, y-sh, sw*2, sh*2);
+                flareCtx.restore();
+
+                // Soft glow halo around streak
+                const hg = flareCtx.createLinearGradient(x-sw*0.6, y, x+sw*0.6, y);
+                hg.addColorStop(0,   'rgba(80,110,220,0)');
+                hg.addColorStop(0.5, `rgba(100,140,230,${sa*0.18})`);
+                hg.addColorStop(1,   'rgba(80,110,220,0)');
+                flareCtx.save();
+                flareCtx.filter = 'blur(10px)';
+                flareCtx.fillStyle = hg;
+                flareCtx.fillRect(x-sw*0.6, y-sh*8, sw*1.2, sh*16);
+                flareCtx.restore();
+
+                // Faint vertical secondary streak (real anamorphic artifact)
+                const vsa = sa * 0.18;
+                const vsh2 = H * 0.5 * viewInt * base;
+                const vsg = flareCtx.createLinearGradient(x, y-vsh2, x, y+vsh2);
+                vsg.addColorStop(0,    'rgba(180,200,255,0)');
+                vsg.addColorStop(0.4,  `rgba(200,220,255,${vsa})`);
+                vsg.addColorStop(0.5,  `rgba(220,235,255,${vsa*1.3})`);
+                vsg.addColorStop(0.6,  `rgba(200,220,255,${vsa})`);
+                vsg.addColorStop(1,    'rgba(180,200,255,0)');
+                flareCtx.fillStyle = vsg;
+                flareCtx.fillRect(x-2.5, y-vsh2, 5, vsh2*2);
+            }
+
+            // ── 4. STARBURST / APERTURE SPIKES ───────────────────────────
+            if (viewInt > 0.12) {
+                const blades = fd.type === 'octa' ? 8 : fd.type === 'penta' || fd.type === 'penta2' ? 10 : 12;
+                const spikeLen = (80 + viewInt * 140) * base;
+                flareCtx.save();
+                flareCtx.translate(x, y);
+                flareCtx.rotate(t * 0.03); // very slow rotation
+                for (let i=0; i<blades; i++) {
+                    const a = (Math.PI*2/blades)*i;
+                    const len = spikeLen * (i%2===0 ? 1 : 0.62);
+                    const gr = flareCtx.createLinearGradient(
+                        Math.cos(a)*8, Math.sin(a)*8,
+                        Math.cos(a)*len, Math.sin(a)*len);
+                    gr.addColorStop(0,   `rgba(255,248,200,${alpha*0.85})`);
+                    gr.addColorStop(0.35,`rgba(255,235,160,${alpha*0.45})`);
+                    gr.addColorStop(1,   'rgba(255,220,100,0)');
+                    flareCtx.beginPath();
+                    flareCtx.moveTo(Math.cos(a)*8,  Math.sin(a)*8);
+                    flareCtx.lineTo(Math.cos(a)*len, Math.sin(a)*len);
+                    flareCtx.strokeStyle = gr;
+                    flareCtx.lineWidth = i%2===0 ? 2 : 1;
+                    flareCtx.stroke();
+                }
+                flareCtx.restore();
+            }
+
+            // ── 5. LENS ELEMENTS with chromatic aberration ────────────────
+            const PRESETS = {
+                penta:  { sides:5,  pal:[
+                    {r:'200,215,255',g:'210,225,255',b:'190,200,255', rim:'240,248,255'},
+                    {r:'180,200,255',g:'190,210,255',b:'170,185,255', rim:'220,235,255'},
+                    {r:'215,205,255',g:'225,215,255',b:'205,195,255', rim:'248,242,255'},
+                    {r:'160,185,250',g:'170,195,255',b:'150,175,240', rim:'210,228,255'},
+                ]},
+                penta2: { sides:5, pal:[
+                    {r:'255,130,30', g:'255,145,50', b:'240,115,20',  rim:'255,215,110'},
+                    {r:'255,95,25',  g:'255,110,40', b:'240,80,15',   rim:'255,175,75'},
+                    {r:'255,155,55', g:'255,168,70', b:'240,140,42',  rim:'255,228,135'},
+                    {r:'215,75,15',  g:'228,88,28',  b:'200,62,8',    rim:'255,155,75'},
+                ]},
+                octa:   { sides:8, pal:[
+                    {r:'195,225,255',g:'205,235,255',b:'185,212,245', rim:'235,248,255'},
+                    {r:'175,205,255',g:'185,215,255',b:'165,192,242', rim:'215,238,255'},
+                    {r:'205,220,255',g:'215,230,255',b:'195,208,245', rim:'242,248,255'},
+                    {r:'165,195,248',g:'175,205,255',b:'155,182,238', rim:'208,232,255'},
+                ]},
+                round:  { sides:0, pal:[
+                    {r:'255,55,35',  g:'255,70,50',  b:'240,40,25',   rim:'255,155,135'},
+                    {r:'255,95,75',  g:'255,108,88', b:'240,80,62',   rim:'255,195,175'},
+                    {r:'195,35,25',  g:'208,48,38',  b:'182,22,12',   rim:'255,135,115'},
+                    {r:'255,75,55',  g:'255,88,68',  b:'240,62,42',   rim:'255,175,155'},
+                ]},
+                rays:   { sides:0, pal:[
+                    {r:'255,205,95', g:'255,218,110',b:'240,190,80',  rim:'255,248,195'},
+                    {r:'255,225,125',g:'255,238,138',b:'240,210,112', rim:'255,255,208'},
+                    {r:'235,195,75', g:'248,208,88', b:'222,180,62',  rim:'255,242,175'},
+                    {r:'255,215,105',g:'255,228,118',b:'240,200,92',  rim:'255,250,215'},
+                ]},
+            };
+            const preset = PRESETS[fd.type] || PRESETS.round;
+
+            // 16 lens elements — varied sizes, mix of large/small creating depth
+            const elems = [
+                {t:0.08, r:30,  a:0.70, pi:0, ring:false},
+                {t:0.18, r:65,  a:0.55, pi:1, ring:true,  concentric:true},
+                {t:0.30, r:120, a:0.45, pi:2, ring:false},
+                {t:0.40, r:48,  a:0.65, pi:3, ring:true},
+                {t:0.52, r:185, a:0.35, pi:0, ring:true,  concentric:true},
+                {t:0.62, r:80,  a:0.55, pi:1, ring:false},
+                {t:0.72, r:42,  a:0.68, pi:2, ring:true},
+                {t:0.82, r:210, a:0.30, pi:3, ring:true,  concentric:true},
+                {t:0.92, r:95,  a:0.50, pi:0, ring:false},
+                {t:1.03, r:55,  a:0.62, pi:1, ring:true},
+                {t:1.14, r:240, a:0.26, pi:2, ring:true,  concentric:true},
+                {t:1.24, r:70,  a:0.55, pi:3, ring:false},
+                {t:1.35, r:150, a:0.40, pi:0, ring:true},
+                {t:1.46, r:38,  a:0.65, pi:1, ring:false},
+                {t:1.58, r:175, a:0.35, pi:2, ring:true,  concentric:true},
+                {t:1.70, r:90,  a:0.48, pi:3, ring:true},
+            ];
+
+            // helper: draw one polygon/circle path
+            function _path(sides, r, rot) {
+                flareCtx.beginPath();
+                if (sides >= 5) {
+                    for (let i=0; i<sides; i++) {
+                        const a = (Math.PI*2/sides)*i + rot;
+                        i===0 ? flareCtx.moveTo(Math.cos(a)*r, Math.sin(a)*r)
+                              : flareCtx.lineTo(Math.cos(a)*r, Math.sin(a)*r);
+                    }
+                    flareCtx.closePath();
+                } else {
+                    flareCtx.arc(0, 0, r, 0, Math.PI*2);
+                }
+            }
+
+            elems.forEach((el, ei) => {
+                const ex = x + dx * el.t;
+                const ey = y + dy * el.t;
+                const ea = el.a * alpha * shimmer;
+                if (ea < 0.004) return;
+                const pal = preset.pal[el.pi % preset.pal.length];
+                const rot = ei * 0.38 + viewInt * 0.25;
+                const caOffset = el.r * 0.018; // chromatic aberration offset
+
+                flareCtx.save();
+                flareCtx.translate(ex, ey);
+
+                // ── Chromatic aberration: draw R, G, B slightly offset ──
+                const channels = [
+                    { off: -caOffset, c: pal.r, ch: 'R' },
+                    { off: 0,         c: pal.g, ch: 'G' },
+                    { off: +caOffset, c: pal.b, ch: 'B' },
+                ];
+                channels.forEach(ch => {
+                    flareCtx.save();
+                    flareCtx.translate(ch.off, ch.off * 0.5);
+                    const rg = flareCtx.createRadialGradient(
+                        -el.r*0.22, -el.r*0.22, 0,
+                        0, 0, el.r
+                    );
+                    rg.addColorStop(0,    `rgba(255,255,255,${(ea*0.45).toFixed(3)})`);
+                    rg.addColorStop(0.25, `rgba(${ch.c},${(ea*0.38).toFixed(3)})`);
+                    rg.addColorStop(0.65, `rgba(${ch.c},${(ea*0.14).toFixed(3)})`);
+                    rg.addColorStop(1,    `rgba(${ch.c},0)`);
+                    _path(preset.sides, el.r, rot);
+                    flareCtx.fillStyle = rg;
+                    flareCtx.globalCompositeOperation = 'screen';
+                    flareCtx.fill();
+                    flareCtx.restore();
+                });
+                flareCtx.globalCompositeOperation = 'source-over';
+
+                // ── Rim highlight ──
+                if (el.ring) {
+                    flareCtx.globalAlpha = ea * 0.55;
+                    flareCtx.strokeStyle = `rgba(${pal.rim},0.9)`;
+                    flareCtx.lineWidth = 1.5;
+                    _path(preset.sides, el.r, rot);
+                    flareCtx.stroke();
+                    flareCtx.globalAlpha = 1;
+                }
+
+                // ── Concentric inner ring ──
+                if (el.concentric) {
+                    const ir = el.r * 0.55;
+                    flareCtx.globalAlpha = ea * 0.35;
+                    flareCtx.strokeStyle = `rgba(${pal.rim},0.7)`;
+                    flareCtx.lineWidth = 1;
+                    _path(preset.sides, ir, rot);
+                    flareCtx.stroke();
+                    flareCtx.globalAlpha = 1;
+                }
+
+                // ── Specular hotspot (inner light reflection) ──
+                const sx = -el.r*0.26, sy = -el.r*0.26;
+                const sp = flareCtx.createRadialGradient(sx, sy, 0, sx, sy, el.r*0.32);
+                sp.addColorStop(0, `rgba(255,255,255,${(ea*0.55).toFixed(3)})`);
+                sp.addColorStop(1, 'rgba(255,255,255,0)');
+                flareCtx.fillStyle = sp;
+                flareCtx.beginPath();
+                flareCtx.arc(sx, sy, el.r*0.32, 0, Math.PI*2);
+                flareCtx.fill();
+
+                flareCtx.restore();
+            });
+
+            // ── 6. LENS DUST — very subtle smudges on sensor ─────────────
+            if (viewInt > 0.3 && base > 0.4) {
+                const dustA = viewInt * base * 0.08;
+                [[0.3, 0.28], [0.7, 0.55], [0.45, 0.72], [0.62, 0.35]].forEach(([px, py]) => {
+                    const dxd = (W*px - x)*0.6 + x;
+                    const dyd = (H*py - y)*0.6 + y;
+                    const dg = flareCtx.createRadialGradient(dxd, dyd, 0, dxd, dyd, 18);
+                    dg.addColorStop(0, `rgba(255,240,200,${dustA})`);
+                    dg.addColorStop(1, 'rgba(255,240,200,0)');
+                    flareCtx.fillStyle = dg;
+                    flareCtx.beginPath();
+                    flareCtx.arc(dxd, dyd, 18, 0, Math.PI*2);
+                    flareCtx.fill();
+                });
+            }
+        }
+
+
+
+                init();
+
+        // =============================================
+        //  TOUR BUILDER
+        //  - blob URL для мгновенной загрузки
+        //  - точка ставится ТОЧНО куда кликнул (ray-sphere intersection)
+        //  - редактирование: drag = переместить, ПКМ = удалить
+        // =============================================
+        // Кастомное уведомление вместо alert()
+        function _showToast(msg, icon) {
+            icon = icon || '⚠';
+            document.getElementById('hs-toast-icon').textContent = icon;
+            document.getElementById('hs-toast-msg').textContent = msg;
+            document.getElementById('hs-toast').classList.add('show');
+            document.getElementById('hs-toast-overlay').classList.add('show');
+        }
+        function _hideToast() {
+            document.getElementById('hs-toast').classList.remove('show');
+            document.getElementById('hs-toast-overlay').classList.remove('show');
+        }
+        document.getElementById('hs-toast-btn').addEventListener('click', _hideToast);
+        document.getElementById('hs-toast-overlay').addEventListener('click', _hideToast);
+
+                let tourMode = false;
+        let tourPanoramas = [];
+        let tourCurrentId = null;
+        let placingHotspot = false;
+        let placingTargetId = null;
+        let hsElems = [];
+        let _hsDragging = false;
+        let _hsDragDot = null;
+        let _hsDragMoved = false;
+
+        const _btnTour    = document.getElementById('btn-create-tour');
+        const _tourPanel  = document.getElementById('tour-panel');
+        const _tourList   = document.getElementById('tour-pano-list');
+        const _hsSel      = document.getElementById('hotspot-target-select');
+        const _btnAddHs   = document.getElementById('btn-add-hotspot');
+        const _btnSave    = document.getElementById('btn-save-tour');
+        const _saveStatus = document.getElementById('tour-save-status');
+        const _hint       = document.getElementById('placing-hint');
+        const _tourFI     = document.getElementById('tour-file-input');
+        const _ctxMenu    = document.getElementById('hs-ctx-menu');
+
+        // ---- Toggle ----
+        _btnTour.addEventListener('click', () => {
+            tourMode = !tourMode;
+            _btnTour.textContent = tourMode ? '✕ Закрыть' : 'Создать тур';
+            _btnTour.classList.toggle('tour-active', tourMode);
+            _tourPanel.classList.toggle('visible', tourMode);
+            if (!tourMode) {
+                _cancelPlacing(); _clearDots(); _hideCtx(); _removeFlareDot();
+                // Restore controls-panel if panorama is loaded
+                if (currentPanoramaUrl) document.getElementById('controls-panel').classList.add('visible');
+            } else {
+                const cp = tourPanoramas.find(x => x.id === tourCurrentId);
+                if (cp) _renderDots(cp);
+                _renderFlareDot();
+                // Hide controls-panel only if tour already has panoramas
+                if (tourPanoramas.length > 0) document.getElementById('controls-panel').classList.remove('visible');
+            }
+        });
+
+        // ---- Добавить панораму (локально) ----
+        document.getElementById('btn-tour-add-pano').addEventListener('click', () => {
+            _tourFI.value = ''; _tourFI.click();
+        });
+
+        _tourFI.addEventListener('change', (e) => {
+            Array.from(e.target.files).forEach(file => {
+                const blobUrl = URL.createObjectURL(file);
+                const name = file.name.replace(/\.[^.]+$/, '');
+                const id = 'p_' + Date.now() + '_' + Math.floor(Math.random() * 9999);
+                tourPanoramas.push({ id, name, blobUrl, file, cloudUrl: null, hotspots: [] });
+                if (tourPanoramas.length === 1) {
+                    _tourGoto(id);
+                    // Hide controls-panel when first panorama added to tour
+                    document.getElementById('controls-panel').classList.remove('visible');
+                    // Enable save button
+                    const sb = document.getElementById('btn-save-tour');
+                    if (sb) { sb.disabled = false; sb.style.opacity = ''; sb.style.cursor = ''; }
+                }
+                _renderList(); _renderSel();
+            });
+        });
+
+        function _renderList() {
+            _tourList.innerHTML = '';
+            tourPanoramas.forEach((p, i) => {
+                const d = document.createElement('div');
+                d.className = 'tp-pano-item' + (p.id === tourCurrentId ? ' tp-current' : '');
+                d.innerHTML = '<img src="' + p.blobUrl + '"><span class="tp-pano-name" title="' + p.name + '">' + p.name + '</span><span class="tp-pano-idx">' + (i+1) + '</span>';
+                d.addEventListener('click', () => _tourGoto(p.id));
+                _tourList.appendChild(d);
+            });
+        }
+
+        function _renderSel() {
+            _hsSel.innerHTML = '<option value="">— выберите цель —</option>';
+            tourPanoramas.forEach(p => {
+                if (p.id === tourCurrentId) return;
+                const o = document.createElement('option');
+                o.value = p.id; o.textContent = p.name;
+                _hsSel.appendChild(o);
+            });
+        }
+
+        function _tourGoto(id) {
+            tourCurrentId = id;
+            if (typeof syncFlareUI === "function") syncFlareUI();
+            const p = tourPanoramas.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('loading').classList.add('visible');
+            document.getElementById('loading-text').textContent = 'Загрузка...';
+            document.getElementById('instructions').style.display = 'none';
+            document.getElementById('upload-overlay').classList.add('hidden');
+            // controls-panel hidden in tour mode
+            document.getElementById('controls-panel').classList.remove('visible');
+            const loader = new THREE.TextureLoader();
+            loader.load(p.blobUrl, (tex) => {
+                if (sphere.material) sphere.material.dispose();
+                sphere.material = new THREE.MeshBasicMaterial({ map: tex });
+                document.getElementById('loading').classList.remove('visible');
+                document.getElementById('loading-progress').textContent = '';
+                lon = 0; lat = 0;
+                _renderList(); _renderSel(); _renderDots(p);
+            }, undefined, () => {
+                document.getElementById('loading').classList.remove('visible');
+            });
+        }
+
+        // ---- Placing ----
+        _btnAddHs.addEventListener('click', () => {
+            if (!tourCurrentId) { _showToast('Сначала выберите панораму'); return; }
+            if (!_hsSel.value)   { _showToast('Выберите панораму-цель для точки перехода', '⊕'); return; }
+            placingTargetId = _hsSel.value;
+            placingHotspot = true;
+            _btnAddHs.classList.add('placing');
+            _btnAddHs.textContent = '↙ Кликните на панораму...';
+            _hint.classList.add('visible');
+            renderer.domElement.style.cursor = 'crosshair';
+            _hideCtx();
+        });
+
+        function _cancelPlacing() {
+            placingHotspot = false; placingTargetId = null;
+            _btnAddHs.classList.remove('placing');
+            _btnAddHs.textContent = '⊕ Поставить точку';
+            _hint.classList.remove('visible');
+            try { if (renderer && renderer.domElement) renderer.domElement.style.cursor = ''; } catch(e) {}
+        }
+
+        // Ray-sphere intersection: точно куда кликнул
+        function _screenToLonLat(sx, sy) {
+            const nx =  (sx / window.innerWidth)  * 2 - 1;
+            const ny = -(sy / window.innerHeight) * 2 + 1;
+            // Луч из камеры через пиксель экрана
+            const far = new THREE.Vector3(nx, ny, 1.0).unproject(camera);
+            const dir = far.clone().sub(camera.position).normalize();
+            // Пересечение луча со сферой радиуса 500 в центре сцены
+            const b = camera.position.dot(dir);
+            const c = camera.position.dot(camera.position) - 500 * 500;
+            const disc = b * b - c;
+            if (disc < 0) return { lon: lon, lat: lat };
+            const t = -b + Math.sqrt(disc); // дальнее пересечение (внутри сферы)
+            const pt = camera.position.clone().addScaledVector(dir, t);
+            const hsLat = THREE.MathUtils.radToDeg(Math.asin(Math.max(-1, Math.min(1, pt.y / 500))));
+            const hsLon = THREE.MathUtils.radToDeg(Math.atan2(pt.z, pt.x));
+            return { lon: hsLon, lat: hsLat };
+        }
+
+        // Сбрасываем флаг перед каждым кликом на канвас
+        renderer.domElement.addEventListener('pointerdown', () => {
+            _hsDragMoved = false;
+        });
+
+        renderer.domElement.addEventListener('click', (e) => {
+            // Flare placement
+            if (_flarePlacing && !_hsDragMoved) {
+                const {lon, lat} = _screenToLonLat(e.clientX, e.clientY);
+                if (tourCurrentId) {
+                    const type      = document.getElementById('flare-type-select').value;
+                    const intensity = parseInt(document.getElementById('flare-intensity').value) / 100;
+                    flareData[tourCurrentId] = {
+                        lon, lat,
+                        type: type === 'none' ? 'round' : type,
+                        intensity
+                    };
+                    if (type === 'none') document.getElementById('flare-type-select').value = 'round';
+                    _stopPlaceMode();
+                    _renderFlareDot();
+                    setFlareStatus('');
+                }
+                return;
+            }
+            if (!placingHotspot || _hsDragMoved) return;
+            const pos = _screenToLonLat(e.clientX, e.clientY);
+            const tp  = tourPanoramas.find(x => x.id === placingTargetId);
+            const cp  = tourPanoramas.find(x => x.id === tourCurrentId);
+            if (cp) {
+                cp.hotspots.push({ lon: pos.lon, lat: pos.lat, targetId: placingTargetId, label: tp ? tp.name : 'Перейти' });
+                _renderDots(cp);
+            }
+            _cancelPlacing();
+        });
+
+        // ---- Hotspot DOM ----
+        function _clearDots() { hsElems.forEach(e => e.remove()); hsElems = []; }
+
+        function _renderDots(p) {
+            _clearDots();
+            if (!p || !p.hotspots) return;
+            p.hotspots.forEach((hs, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'hotspot-dot' + (tourMode ? ' edit-mode' : '');
+                dot.style.position = 'absolute';
+                dot.style.display  = 'none'; // hsLoop покажет
+                dot.innerHTML = '<div class="hotspot-dot-inner">' + (tourMode ? '✥' : '›') + '</div>'
+                              + (tourMode ? '<div class="dot-delete-btn">✕</div>' : '');
+                dot._hs   = hs;
+                dot._hsIdx = idx;
+                dot._pano  = p;
+
+                if (tourMode) {
+                    // ПКМ — удалить
+                    dot.addEventListener('contextmenu', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+                        _showCtx(e.clientX, e.clientY, dot);
+                    });
+                    // Drag — переместить
+                    dot.addEventListener('pointerdown', (e) => {
+                        if (e.button !== 0) return;
+                        e.preventDefault();
+                        e.stopPropagation();
+                        _hsDragging = true; _hsDragDot = dot; _hsDragMoved = false;
+                        dot.setPointerCapture(e.pointerId);
+                    });
+                    dot.addEventListener('pointermove', (e) => {
+                        if (!_hsDragging || _hsDragDot !== dot) return;
+                        e.preventDefault();
+                        _hsDragMoved = true;
+                        const pos = _screenToLonLat(e.clientX, e.clientY);
+                        dot._hs.lon = pos.lon;
+                        dot._hs.lat = pos.lat;
+                    });
+                    dot.addEventListener('pointerup', () => {
+                        if (_hsDragDot === dot) { _hsDragging = false; _hsDragDot = null; }
+                    });
+                    dot.addEventListener('click', (e) => e.stopPropagation());
+
+                    // Кнопка удаления
+                    const delBtn = dot.querySelector('.dot-delete-btn');
+                    if (delBtn) {
+                        delBtn.addEventListener('pointerdown', (e) => { e.stopPropagation(); e.preventDefault(); });
+                        delBtn.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            const pano = dot._pano;
+                            const i = pano.hotspots.indexOf(dot._hs);
+                            if (i !== -1) pano.hotspots.splice(i, 1);
+                            _renderDots(pano);
+                        });
+                    }
+                } else {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        _tourGoto(hs.targetId);
+                    });
+                }
+
+                document.getElementById('viewer-container').appendChild(dot);
+                hsElems.push(dot);
+            });
+        }
+
+        // Обновление позиций каждый кадр
+        (function _hsLoop() {
+            requestAnimationFrame(_hsLoop);
+            if (!hsElems.length) return;
+            hsElems.forEach(dot => {
+                const hs = dot._hs;
+                const phi = THREE.MathUtils.degToRad(90 - hs.lat);
+                const th  = THREE.MathUtils.degToRad(hs.lon);
+                const v = new THREE.Vector3(
+                    500 * Math.sin(phi) * Math.cos(th),
+                    500 * Math.cos(phi),
+                    500 * Math.sin(phi) * Math.sin(th)
+                );
+                v.project(camera);
+                if (v.z > 1) {
+                    dot.style.display = 'none';
+                } else {
+                    dot.style.display = 'block';
+                    dot.style.left = ((v.x  * 0.5 + 0.5) * window.innerWidth)  + 'px';
+                    dot.style.top  = ((-v.y * 0.5 + 0.5) * window.innerHeight) + 'px';
+                }
+            });
+        })();
+
+        // ---- Контекстное меню ----
+        let _ctxDot = null;
+        function _showCtx(x, y, dot) {
+            if (!_ctxMenu) return;
+            _ctxDot = dot;
+            _ctxMenu.style.left = Math.min(x, window.innerWidth  - 170) + 'px';
+            _ctxMenu.style.top  = Math.min(y, window.innerHeight - 60)  + 'px';
+            _ctxMenu.classList.add('visible');
+        }
+        function _hideCtx() { if (_ctxMenu) _ctxMenu.classList.remove('visible'); _ctxDot = null; }
+
+        if (document.getElementById('ctx-delete')) document.getElementById('ctx-delete').addEventListener('click', () => {
+            if (!_ctxDot) return;
+            _ctxDot._pano.hotspots.splice(_ctxDot._hsIdx, 1);
+            _renderDots(_ctxDot._pano);
+            _hideCtx();
+        });
+        document.addEventListener('click',   (e) => { if (!e.target.closest('#hs-ctx-menu')) _hideCtx(); });
+        document.addEventListener('keydown',  (e) => { if (e.key === 'Escape') { _cancelPlacing(); _hideCtx(); } });
+
+        // ---- Сохранить тур ----
+        _btnSave.addEventListener('click', async () => {
+            if (!tourPanoramas.length) { _showToast('Добавьте хотя бы одну панораму в тур', '⊕'); return; }
+            _btnSave.disabled = true;
+            _saveStatus.textContent = '';
+
+            try {
+                // Загружаем на Cloudinary те панорамы, которые ещё не загружены
+                for (let i = 0; i < tourPanoramas.length; i++) {
+                    const p = tourPanoramas[i];
+                    if (p.yadiskUrl) continue;
+
+                    _saveStatus.textContent = 'Загрузка ' + (i + 1) + '/' + tourPanoramas.length + ': ' + p.name;
+                    _btnSave.textContent = (i + 1) + '/' + tourPanoramas.length + ' загрузка...';
+                    let toUpload = await convertToJpeg(p.file);
+                    // Загружаем на Яндекс.Диск через uploadToYaDisk
+                    p.yadiskUrl = await new Promise(async (resolve, reject) => {
+                        try {
+                            const _fn = (toUpload.name||'panorama').replace(/[^a-zA-Z0-9_-]/g,'_')+'_'+Date.now()+'.jpg';
+                            const r = await uploadToYaDisk(toUpload, _fn);
+                            resolve(r.secure_url);
+                        } catch(e) { reject(e); }
+                    });
+                }
+
+                // Собираем данные для экспорта
+                _saveStatus.textContent = 'Генерация файла...';
+                const exportData = tourPanoramas.map(p => ({
+                    id: p.id,
+                    name: p.name,
+                    url: p.yadiskUrl,
+                    hotspots: p.hotspots,
+                    flare: flareData[p.id] || null
+                }));
+
+                // Генерируем и скачиваем HTML
+                const html = _buildTourHtml(exportData);
+                const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'tour_obraz27.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+                _saveStatus.textContent = '✓ Тур сохранён';
+
+            } catch (err) {
+                console.error('Save error:', err);
+                alert('Ошибка сохранения: ' + err.message);
+                _saveStatus.textContent = '✗ ' + err.message;
+            } finally {
+                _btnSave.disabled = false;
+                _btnSave.textContent = 'Сохранить тур';
+            }
+        });
+
+        function _buildTourHtml(data) {
+            const tourJson = JSON.stringify(data);
+
+            const headerHtml = '<header>\n        <div class="logo" style="display: flex; align-items: center;">\n                <a href="https://obraz27.com/" target="_blank" style="display: block; line-height: 0; transition: all 0.3s ease;">\n                    <img src="data:image/png;base64,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" alt="Logo" style="height: 45px; display: block; cursor: pointer; transition: opacity 0.3s ease, transform 0.3s ease;" \n                         onmouseover="this.style.opacity=\'0.7\'; this.style.transform=\'scale(1.05)\';" \n                         onmouseout="this.style.opacity=\'1\'; this.style.transform=\'scale(1)\';">\n                </a>\n            </div>\n</header>';
+            const footerHtml = '<!-- Contact Info Footer -->\n    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); \n                font-size: 11px; color: #ffffff; text-align: center; \n                font-weight: 300; letter-spacing: 0.5px; pointer-events: auto; z-index: 50;\n                opacity: 0.6; user-select: text; cursor: text;">\n        e. mail@obraz27.com<br>\n        p. +7 928 602 83 18\n    </div>';
+
+            const css = `
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #fff; overflow: hidden; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Arial, sans-serif; }
+header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 65px; padding: 0 40px;
+    display: flex; align-items: center;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+#vc { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+#fcanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 200; }
+#vc canvas {
+    transition: filter 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#vc canvas.fly-out {
+    filter: blur(28px) brightness(0.55);
+}
+#vc canvas.fly-in {
+    transition: filter 0.85s cubic-bezier(0.0, 0.0, 0.2, 1);
+    filter: blur(0px) brightness(1);
+}
+#thumbs {
+    position: fixed; bottom: 52px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 100;
+    padding: 8px 14px;
+    background: rgba(10,10,10,0.75); backdrop-filter: blur(10px);
+    border-radius: 50px; border: 1px solid rgba(255,255,255,0.07);
+}
+.tthumb {
+    width: 48px; height: 32px; object-fit: cover; border-radius: 3px;
+    cursor: pointer; border: 2px solid transparent; opacity: 0.5; transition: all .2s;
+}
+.tthumb:hover { opacity: 1; }
+.tthumb.on { border-color: #fff; opacity: 1; }
+.hsdot {
+    position: absolute; width: 46px; height: 46px;
+    transform: translate(-50%,-50%); cursor: pointer;
+    z-index: 300; pointer-events: all; user-select: none;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+.hsdot.fade-out { opacity: 0; transform: translate(-50%,-50%) scale(2.5); pointer-events: none; }
+.hsdot-in {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 24px; height: 24px; border-radius: 50%;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.28), 0 0 18px rgba(255,255,255,0.35);
+    transition: all .25s;
+}
+.hsdot:hover .hsdot-in { width: 30px; height: 30px; box-shadow: 0 0 0 4px rgba(255,255,255,0.45), 0 0 28px rgba(255,255,255,0.5); }
+.hsdot-lbl { display: none; }
+#ld {
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center; font-size: 13px; font-weight: 300;
+    letter-spacing: 2px; display: none; z-index: 700;
+}
+#ld.v { display: block; }
+.sp {
+    width: 34px; height: 34px;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-top: 2px solid #fff; border-radius: 50%;
+    animation: spin 1s linear infinite; margin: 0 auto 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+`;
+
+            const js = `
+const TOUR = ${tourJson};
+let scene, cam, rend, sph;
+let isDown = false, dx = 0, dy = 0, lon = 0, dl = 0, lat = 0, db = 0;
+let dots = [], curId = null, transitioning = false;
+let vLon = 0, vLat = 0, _lastT = 0, _lastLon = 0, _lastLat = 0;
+const BASE_FOV = 75;
+const ldEl = document.getElementById('ld');
+
+function init() {
+    const vc = document.getElementById('vc');
+    scene = new THREE.Scene();
+    cam = new THREE.PerspectiveCamera(BASE_FOV, innerWidth / innerHeight, 0.1, 1000);
+    rend = new THREE.WebGLRenderer({ antialias: true });
+    rend.setSize(innerWidth, innerHeight);
+    rend.setPixelRatio(devicePixelRatio);
+    vc.appendChild(rend.domElement);
+    const g = new THREE.SphereGeometry(500, 60, 40);
+    g.scale(-1, 1, 1);
+    sph = new THREE.Mesh(g);
+    scene.add(sph);
+
+    document.addEventListener('pointerdown', e => {
+        if (e.target.closest('.hsdot')) return;
+        if (e.target.closest('#tour-panel')) return;
+        isDown = true; dx = e.clientX; dy = e.clientY; dl = lon; db = lat;
+        vLon = 0; vLat = 0; _lastT = performance.now(); _lastLon = lon; _lastLat = lat;
+    });
+    document.addEventListener('pointermove', e => {
+        if (!isDown) return;
+        const nLon = (dx - e.clientX) * 0.1 + dl;
+        const nLat = Math.max(-85, Math.min(85, (e.clientY - dy) * 0.1 + db));
+        const now = performance.now(), dt = now - _lastT;
+        if (dt > 0 && dt < 80) {
+            vLon = (nLon - _lastLon) / dt * 16;
+            vLat = (nLat - _lastLat) / dt * 16;
+        }
+        _lastLon = nLon; _lastLat = nLat; _lastT = now;
+        lon = nLon; lat = nLat;
+    });
+    document.addEventListener('pointerup', () => isDown = false);
+    document.addEventListener('wheel', e => {
+        e.preventDefault();
+        cam.fov = Math.max(30, Math.min(120, cam.fov + e.deltaY * 0.05));
+        cam.updateProjectionMatrix();
+    }, { passive: false });
+    window.addEventListener('resize', () => {
+        cam.aspect = innerWidth / innerHeight;
+        cam.updateProjectionMatrix();
+        rend.setSize(innerWidth, innerHeight);
+    });
+
+    buildThumbs();
+    _initFlareCanvas();
+    loadPano(TOUR[0].id, false);
+    tick();
+}
+
+// Анимация значения с easing
+let _animId = null;
+function _animVal(from, to, ms, easeIn, onStep, onDone) {
+    const t0 = performance.now();
+    if (_animId) cancelAnimationFrame(_animId);
+    function step(now) {
+        const t = Math.min((now - t0) / ms, 1);
+        const e = easeIn ? t * t * t : 1 - Math.pow(1 - t, 3);
+        onStep(from + (to - from) * e, t);
+        if (t < 1) { _animId = requestAnimationFrame(step); }
+        else { onStep(to, 1); if (onDone) onDone(); }
+    }
+    _animId = requestAnimationFrame(step);
+}
+
+// Целевые lon/lat для zoom-to-hotspot
+let targetLon = 0, targetLat = 0;
+
+function loadPano(id, animate, hsLon, hsLat) {
+    if (transitioning) return;
+    if (animate === undefined) animate = true;
+    const p = TOUR.find(x => x.id === id);
+    if (!p) return;
+    curId = id;
+    const _fp = TOUR.find(x=>x.id===id); _cflare = _fp ? (_fp.flare||null) : null;
+    document.querySelectorAll('.tthumb').forEach((t, i) => t.classList.toggle('on', TOUR[i].id === id));
+
+    if (animate) {
+        transitioning = true;
+        const canvas = rend.domElement;
+        const startLon = lon, startLat = lat;
+        // Целевое направление — туда, куда ведёт точка
+        let rawFlyLon = (hsLon !== undefined) ? hsLon : lon;
+        const flyToLat = (hsLat !== undefined) ? hsLat : lat;
+        // Кратчайший путь по горизонтали — не допускаем разворота на 180°
+        let dLon = ((rawFlyLon - startLon) % 360 + 540) % 360 - 180;
+        const flyToLon = startLon + dLon;
+
+        // Фаза 1: zoom in + поворот к точке + blur (650ms easeIn)
+        dots.forEach(d => d.classList.add('fade-out'));
+        canvas.classList.remove('fly-in');
+        canvas.classList.add('fly-out');
+        if (_fc) { _fc.style.transition = 'opacity 0.65s cubic-bezier(0.4,0,0.2,1)'; _fc.style.opacity = '0'; }
+
+        _animVal(0, 1, 650, true, (v) => {
+            // Плавно поворачиваем взгляд к точке
+            lon = startLon + (flyToLon - startLon) * v;
+            lat = startLat + (flyToLat - startLat) * v;
+            // FOV сужается к точке
+            cam.fov = BASE_FOV + (30 - BASE_FOV) * v;
+            cam.updateProjectionMatrix();
+        }, () => {
+            // Фаза 2: загружаем новую панораму
+            _doLoadPano(p, () => {
+                // Начинаем с направления прилёта и широкого FOV
+                lon = flyToLon; lat = flyToLat;
+                cam.fov = 110;
+                cam.updateProjectionMatrix();
+
+                // Мгновенно снимаем blur без transition
+                canvas.style.transition = 'none';
+                canvas.classList.remove('fly-out');
+                void canvas.offsetWidth;
+                canvas.style.transition = '';
+                canvas.classList.add('fly-in');
+                if (_fc) { _fc.style.transition = 'none'; void _fc.offsetWidth; _fc.style.transition = 'opacity 0.85s cubic-bezier(0.0,0.0,0.2,1)'; _fc.style.opacity = '1'; }
+
+                // Фаза 3: zoom out 110→75 + поворот к центру (850ms easeOut)
+                const arrLon = flyToLon, arrLat = flyToLat;
+                _animVal(0, 1, 850, false, (v) => {
+                    lon = arrLon + (0 - arrLon) * v;
+                    lat = arrLat + (0 - arrLat) * v;
+                    cam.fov = 110 + (BASE_FOV - 110) * v;
+                    cam.updateProjectionMatrix();
+                }, () => {
+                    lon = 0; lat = 0;
+                    transitioning = false;
+                });
+            });
+        });
+    } else {
+        _doLoadPano(p, () => {});
+    }
+}
+
+function _doLoadPano(p, cb) {
+    ldEl.className = 'v';
+    new THREE.TextureLoader().load(p.url, tex => {
+        if (sph.material) sph.material.dispose();
+        sph.material = new THREE.MeshBasicMaterial({ map: tex });
+        ldEl.className = '';
+        renderDots(p);
+        cb();
+    }, undefined, () => { ldEl.className = ''; cb(); });
+}
+
+function renderDots(p) {
+    dots.forEach(d => d.remove()); dots = [];
+    (p.hotspots || []).forEach(hs => {
+        const d = document.createElement('div');
+        d.className = 'hsdot';
+        d.innerHTML = '<div class="hsdot-in"></div>';
+        d.addEventListener('click', e => { e.stopPropagation(); loadPano(hs.targetId, true, hs.lon, hs.lat); });
+        document.getElementById('vc').appendChild(d);
+        d._h = hs; dots.push(d);
+    });
+}
+
+function buildThumbs() {
+    const c = document.getElementById('thumbs');
+    TOUR.forEach((p, i) => {
+        const img = document.createElement('img');
+        img.className = 'tthumb' + (i === 0 ? ' on' : '');
+        img.src = p.url; img.crossOrigin = 'anonymous'; img.title = p.name;
+        img.addEventListener('click', () => loadPano(p.id, true));
+        c.appendChild(img);
+    });
+}
+
+function updateDots() {
+    dots.forEach(d => {
+        const h = d._h;
+        const phi = THREE.MathUtils.degToRad(90 - h.lat);
+        const th  = THREE.MathUtils.degToRad(h.lon);
+        const v = new THREE.Vector3(500*Math.sin(phi)*Math.cos(th), 500*Math.cos(phi), 500*Math.sin(phi)*Math.sin(th));
+        v.project(cam);
+        if (v.z > 1) { d.style.display = 'none'; }
+        else { d.style.display = 'block'; d.style.left = (v.x*.5+.5)*innerWidth+'px'; d.style.top = (-v.y*.5+.5)*innerHeight+'px'; }
+    });
+}
+
+function tick() {
+    requestAnimationFrame(tick);
+    if (!isDown && !transitioning) {
+        lon  += vLon;
+        lat   = Math.max(-85, Math.min(85, lat + vLat));
+        vLon *= 0.88;
+        vLat *= 0.88;
+        if (Math.abs(vLon) < 0.002) vLon = 0;
+        if (Math.abs(vLat) < 0.002) vLat = 0;
+    }
+    lat = Math.max(-85, Math.min(85, lat));
+    const phi = THREE.MathUtils.degToRad(90 - lat);
+    const th  = THREE.MathUtils.degToRad(lon);
+    cam.lookAt(500*Math.sin(phi)*Math.cos(th), 500*Math.cos(phi), 500*Math.sin(phi)*Math.sin(th));
+    rend.render(scene, cam);
+    updateDots();
+    drawViewerFlare();
+}
+
+// ── VIEWER FLARE SYSTEM ──────────────────────────────────────────────────
+let _fc = null, _fcx = null, _cflare = null;
+function _initFlareCanvas() {
+    _fc = document.getElementById('fcanvas');
+    if (!_fc) return;
+    _fcx = _fc.getContext('2d');
+    _fc.width = innerWidth; _fc.height = innerHeight;
+    window.addEventListener('resize', () => { _fc.width=innerWidth; _fc.height=innerHeight; });
+}
+function _ll2s(flon, flat) {
+    const phi = THREE.MathUtils.degToRad(90 - flat);
+    const th  = THREE.MathUtils.degToRad(flon);
+    const v   = new THREE.Vector3(500*Math.sin(phi)*Math.cos(th), 500*Math.cos(phi), 500*Math.sin(phi)*Math.sin(th)).project(cam);
+    return { x:(v.x*0.5+0.5)*innerWidth, y:(-v.y*0.5+0.5)*innerHeight, behind:v.z>1 };
+}
+function drawViewerFlare() {
+    if (!_fcx) return;
+    _fcx.clearRect(0,0,_fc.width,_fc.height);  // always clear, even if no flare
+    if (!_cflare) return;
+    const fd = _cflare;
+    if (!fd || fd.type==='none') return;
+    const {x,y,behind} = _ll2s(fd.lon, fd.lat);
+    if (behind) return;
+    const W=_fc.width, H=_fc.height;
+    const cx=W/2, cy=H/2, dx=cx-x, dy=cy-y;
+    const dist=Math.sqrt(dx*dx+dy*dy), maxD=Math.sqrt(cx*cx+cy*cy);
+    const vi=Math.max(0,1-dist/(maxD*0.9)), base=fd.intensity??0.6;
+    const al=Math.min(1,0.04+vi*base);
+    const sh=1+Math.sin(Date.now()*0.0006)*0.04*vi;
+    // Atmospheric glow
+    if(vi>0.1){const vg=_fcx.createRadialGradient(x,y,0,x,y,Math.max(W,H)*1.1);vg.addColorStop(0,'rgba(255,240,180,' + ((0.12*vi*base).toFixed(3)) + ')');vg.addColorStop(0.25,'rgba(255,220,120,' + ((0.07*vi*base).toFixed(3)) + ')');vg.addColorStop(1,'rgba(255,180,60,0)');_fcx.fillStyle=vg;_fcx.fillRect(0,0,W,H);}
+    // Bloom layers
+    [{r:W*.55,a:.30,c:'255,242,195'},{r:W*.28,a:.38,c:'255,228,160'},{r:W*.12,a:.50,c:'255,215,130'},{r:W*.055,a:.65,c:'255,248,210'},{r:W*.022,a:.80,c:'255,255,240'}].forEach(bl=>{const r=bl.r*vi*base*sh;if(r<3)return;const g=_fcx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(' + (bl.c) + ',' + ((bl.a*vi*base).toFixed(3)) + ')');g.addColorStop(.4,'rgba(' + (bl.c) + ',' + ((bl.a*vi*base*.3).toFixed(3)) + ')');g.addColorStop(1,'rgba(' + (bl.c) + ',0)');_fcx.fillStyle=g;_fcx.beginPath();_fcx.arc(x,y,r,0,Math.PI*2);_fcx.fill();});
+    if(fd.type==='glare')return;
+    // Anamorphic streak
+    if(vi>0.04){const sa=vi*base*.6*sh,sw=W*.95*vi*base,sh2=1.5+vi*3.5*base;const sg=_fcx.createLinearGradient(x-sw,y,x+sw,y);sg.addColorStop(0,'rgba(80,130,255,0)');sg.addColorStop(.18,'rgba(120,170,255,' + (sa*.45) + ')');sg.addColorStop(.5,'rgba(240,250,255,' + (sa) + ')');sg.addColorStop(.82,'rgba(120,170,255,' + (sa*.45) + ')');sg.addColorStop(1,'rgba(80,130,255,0)');_fcx.save();_fcx.shadowColor='rgba(140,190,255,' + (sa*.6) + ')';_fcx.shadowBlur=8;_fcx.fillStyle=sg;_fcx.fillRect(x-sw,y-sh2,sw*2,sh2*2);_fcx.restore();}
+    // Starburst
+    if(vi>0.12){const bl2=fd.type==='octa'?8:fd.type==='penta'||fd.type==='penta2'?10:12;const sLen=(80+vi*140)*base;_fcx.save();_fcx.translate(x,y);_fcx.rotate(Date.now()*.00003);for(let i=0;i<bl2;i++){const a=(Math.PI*2/bl2)*i;const len=sLen*(i%2===0?1:.62);const gr=_fcx.createLinearGradient(Math.cos(a)*8,Math.sin(a)*8,Math.cos(a)*len,Math.sin(a)*len);gr.addColorStop(0,'rgba(255,248,200,' + (al*.85) + ')');gr.addColorStop(.35,'rgba(255,235,160,' + (al*.45) + ')');gr.addColorStop(1,'rgba(255,220,100,0)');_fcx.beginPath();_fcx.moveTo(Math.cos(a)*8,Math.sin(a)*8);_fcx.lineTo(Math.cos(a)*len,Math.sin(a)*len);_fcx.strokeStyle=gr;_fcx.lineWidth=i%2===0?2:1;_fcx.stroke();}  _fcx.restore();}
+    // Lens elements
+    const PALS={penta:[{r:'200,215,255',g:'210,225,255',b:'190,200,255',rim:'240,248,255'},{r:'180,200,255',g:'190,210,255',b:'170,185,255',rim:'220,235,255'}],penta2:[{r:'255,130,30',g:'255,145,50',b:'240,115,20',rim:'255,215,110'},{r:'255,95,25',g:'255,110,40',b:'240,80,15',rim:'255,175,75'}],octa:[{r:'195,225,255',g:'205,235,255',b:'185,212,245',rim:'235,248,255'},{r:'175,205,255',g:'185,215,255',b:'165,192,242',rim:'215,238,255'}],round:[{r:'255,55,35',g:'255,70,50',b:'240,40,25',rim:'255,155,135'},{r:'255,95,75',g:'255,108,88',b:'240,80,62',rim:'255,195,175'}],rays:[{r:'255,205,95',g:'255,218,110',b:'240,190,80',rim:'255,248,195'},{r:'255,225,125',g:'255,238,138',b:'240,210,112',rim:'255,255,208'}]};
+    const pal=PALS[fd.type]||PALS.round;
+    const sides={penta:5,penta2:5,octa:8,round:0,rays:0}[fd.type]||0;
+    const elems=[{t:.08,r:30,a:.70,pi:0,ring:false},{t:.18,r:65,a:.55,pi:1,ring:true,cc:true},{t:.30,r:120,a:.45,pi:0,ring:false},{t:.40,r:48,a:.65,pi:1,ring:true},{t:.52,r:185,a:.35,pi:0,ring:true,cc:true},{t:.62,r:80,a:.55,pi:1,ring:false},{t:.72,r:42,a:.68,pi:0,ring:true},{t:.82,r:210,a:.30,pi:1,ring:true,cc:true},{t:.92,r:95,a:.50,pi:0,ring:false},{t:1.03,r:55,a:.62,pi:1,ring:true},{t:1.14,r:240,a:.26,pi:0,ring:true,cc:true},{t:1.24,r:70,a:.55,pi:1,ring:false},{t:1.35,r:150,a:.40,pi:0,ring:true},{t:1.46,r:38,a:.65,pi:1,ring:false},{t:1.58,r:175,a:.35,pi:0,ring:true,cc:true},{t:1.70,r:90,a:.48,pi:1,ring:true}];
+    function _path(s,r,rot){_fcx.beginPath();if(s>=5){for(let i=0;i<s;i++){const a=(Math.PI*2/s)*i+rot;i===0?_fcx.moveTo(Math.cos(a)*r,Math.sin(a)*r):_fcx.lineTo(Math.cos(a)*r,Math.sin(a)*r);}_fcx.closePath();}else{_fcx.arc(0,0,r,0,Math.PI*2);}}
+    elems.forEach((el,ei)=>{const ex=x+dx*el.t,ey=y+dy*el.t,ea=el.a*al*sh;if(ea<.004)return;const p=pal[el.pi%pal.length],rot=ei*.38+vi*.25,ca=el.r*.018;_fcx.save();_fcx.translate(ex,ey);[{off:-ca,c:p.r},{off:0,c:p.g},{off:ca,c:p.b}].forEach(ch=>{_fcx.save();_fcx.translate(ch.off,ch.off*.5);const rg=_fcx.createRadialGradient(-el.r*.22,-el.r*.22,0,0,0,el.r);rg.addColorStop(0,'rgba(255,255,255,' + ((ea*.45).toFixed(3)) + ')');rg.addColorStop(.25,'rgba(' + (ch.c) + ',' + ((ea*.38).toFixed(3)) + ')');rg.addColorStop(1,'rgba(' + (ch.c) + ',0)');_path(sides,el.r,rot);_fcx.fillStyle=rg;_fcx.globalCompositeOperation='screen';_fcx.fill();_fcx.restore();});_fcx.globalCompositeOperation='source-over';if(el.ring){_fcx.globalAlpha=ea*.55;_fcx.strokeStyle='rgba(' + (p.rim) + ',.9)';_fcx.lineWidth=1.5;_path(sides,el.r,rot);_fcx.stroke();_fcx.globalAlpha=1;}if(el.cc){_fcx.globalAlpha=ea*.35;_fcx.strokeStyle='rgba(' + (p.rim) + ',.7)';_fcx.lineWidth=1;_path(sides,el.r*.55,rot);_fcx.stroke();_fcx.globalAlpha=1;}const sp=_fcx.createRadialGradient(-el.r*.26,-el.r*.26,0,-el.r*.26,-el.r*.26,el.r*.32);sp.addColorStop(0,'rgba(255,255,255,' + ((ea*.55).toFixed(3)) + ')');sp.addColorStop(1,'rgba(255,255,255,0)');_fcx.fillStyle=sp;_fcx.beginPath();_fcx.arc(-el.r*.26,-el.r*.26,el.r*.32,0,Math.PI*2);_fcx.fill();_fcx.restore();});
+}
+init();
+`;
+
+            const parts = [
+'<!DOCTYPE html>',
+'<html lang="ru">',
+'<head>',
+'<meta charset="UTF-8">',
+'<meta name="viewport" content="width=device-width,initial-scale=1.0">',
+'<title>Obraz27 — Virtual Tour</title>',
+'<link rel="icon" type="image/png" href="data:image/png;base64,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">',
+'<style>' + css + '</style>',
+'</head>',
+'<body>',
+headerHtml,
+'<div id="vc"></div>',
+'<canvas id="fcanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:200;"></canvas>',
+'<div id="thumbs"></div>',
+'<div id="ld"><div class="sp"></div>Загрузка...</div>',
+footerHtml,
+'<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><' + '/script>',
+'<script>' + js + '<' + '/script>',
+'</body>',
+'</html>'
+            ];
+            return parts.join('\n');
+        }
+
+
+
+        // Кнопка "Создать тур" скрыта для получателя ссылки (URL содержит ?p=)
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('p')) {
+                const btn = document.getElementById('btn-create-tour');
+                if (btn) btn.style.setProperty('display', 'none', 'important');
+            }
+        })();
+    </script>
+<!-- Edge: use Firefox/Chrome if Tracking Prevention blocks Three.js -->
+
+    <!-- Contact Info Footer -->
+    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); 
+                font-size: 11px; color: #ffffff; text-align: center; 
+                font-weight: 300; letter-spacing: 0.5px; pointer-events: auto; z-index: 50;
+                opacity: 0.6; user-select: text; cursor: text;">
+        e. mail@obraz27.com<br>
+        p. +7 928 602 83 18
+    </div>
+    <div id="hs-ctx-menu"><div class="ctx-item" id="ctx-delete">🗑 Удалить точку</div></div>
+</body>
+</html>
