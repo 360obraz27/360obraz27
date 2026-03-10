@@ -1,0 +1,13 @@
+# netlify.toml — положить в корень репозитория
+
+# Edge Function для проксирования Яндекс.Диска (решает CORS + 403)
+[[edge_functions]]
+  path     = "/yadisk-proxy"
+  function = "yadisk-proxy"
+
+# SPA: все пути → index.html (кроме /yadisk-proxy — он обработан выше)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+  force  = false
